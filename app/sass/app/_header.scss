@@ -1,0 +1,13 @@
+#header {
+  float: left;
+  width: $column-width * 15;
+  margin-top: 0;
+  
+  #logo {
+    @extend .hide-text;
+    display: block;
+    width: $column-width * 15;
+    height: $line-height * 4;
+    background: url('/images/logo.png') center center no-repeat;
+  }
+}
