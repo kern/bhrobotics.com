@@ -17,11 +17,13 @@ blockquote {
 
 ol {
   @extend .one-line;
+  list-style-position: inside;
   list-style-type: decimal;
 }
 
 ul {
   @extend .one-line;
+  list-style-position: inside;
   list-style-type: square;
 }
 

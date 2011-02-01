@@ -1,0 +1,17 @@
+.columns {
+  @extend .one-line;
+  @extend .clearfix;
+  padding: 0 $column-width;
+  background: url(/images/dashes.png) center center repeat-y;
+  
+  & > .column {
+    float: left;
+    width: $column-width * 14;
+    padding: 0 !important;
+    margin: 0 !important;
+    
+    & + .column {
+      float: right;
+    }
+  }
+}

@@ -4,7 +4,7 @@ h5, h6, pre, form, p, blockquote, fieldset, input {
   border: 0;
   padding: 0; }
 
-.clearfix:after, #container:after, #main:after, section:after, nav:after, article:after, aside:after, hgroup:after, header:after, footer:after, address:after {
+.clearfix:after, #container:after, #main:after, .columns:after, section:after, nav:after, article:after, aside:after, hgroup:after, header:after, footer:after, address:after {
   display: block;
   height: 0;
   content: '';
@@ -16,9 +16,9 @@ h5, h6, pre, form, p, blockquote, fieldset, input {
 .unclickable {
   cursor: default; }
 
-.fake-collapse > :first-child, #main > :first-child, #main section > :first-child, .fake-collapse > :first-child > :first-child, #main > :first-child > :first-child, #main section > :first-child > :first-child {
+.fake-collapse > :first-child, .fake-collapse > :first-child > :first-child {
   margin-top: 0; }
-.fake-collapse > :last-child, #main > :last-child, #main section > :last-child, .fake-collapse > :last-child > :last-child, #main > :last-child > :last-child, #main section > :last-child > :last-child {
+.fake-collapse > :last-child, .fake-collapse > :last-child > :last-child {
   margin-bottom: 0; }
 
 .hide {
@@ -40,11 +40,11 @@ footer, header, hgroup, menu, nav, section, summary {
 a img {
   border: none; }
 
-.one-line, p, pre, blockquote, ol, ul, dl, h1, h2, h3, h4, h5, h6, hgroup {
+.one-line, .columns, p, pre, blockquote, ol, ul, dl, section, h1, h2, h3, h4, h5, h6, hgroup {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-.two-line, section, nav, article, aside, header, footer, address {
+.two-line, nav, article, aside, header, footer, address {
   margin-top: 40px;
   margin-bottom: 40px; }
 
@@ -83,18 +83,16 @@ a img {
 .h2-type, h2 {
   font-size: 24px;
   line-height: 40px;
-  color: #333333;
+  color: #555555;
   text-decoration: none;
-  text-shadow: none;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3); }
+  text-shadow: none; }
 
 .h3-type, h3, h4, h5, h6 {
   font-size: 18px;
   line-height: 20px;
   color: #333333;
   text-decoration: none;
-  text-shadow: none;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3); }
+  text-shadow: none; }
 
 .body-type, html {
   font-size: 12px;
@@ -109,6 +107,8 @@ a img {
   color: #ff6f29;
   text-decoration: underline;
   text-shadow: none; }
+  .link-type:hover, a:hover {
+    color: #ff915c; }
 
 .note-type, small {
   font-size: 10px;
@@ -138,26 +138,49 @@ a img {
     background: url("/images/logo.png") center center no-repeat; }
 
 #main {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding-box !important;
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   position: relative;
   float: left;
   width: 640px;
-  margin-left: 20px; }
+  margin-left: 20px;
+  background: #e6e6e6; }
   #main section {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
     -webkit-background-clip: padding-box !important;
-    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    margin: 0 0 20px 0;
-    padding: 20px 20px;
-    background: #e6e6e6; }
+    padding: 0 20px; }
 
 #footer {
   float: left;
   margin-bottom: 0;
   text-align: center; }
+
+#carousel {
+  margin: 0 !important;
+  padding: 0 !important; }
+  #carousel img {
+    -moz-border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+    -webkit-background-clip: padding-box !important; }
+
+.columns {
+  padding: 0 20px;
+  background: url(/images/dashes.png) center center repeat-y; }
+  .columns > .column {
+    float: left;
+    width: 280px;
+    padding: 0 !important;
+    margin: 0 !important; }
+    .columns > .column + .column {
+      float: right; }
 
 html {
   position: relative;
@@ -188,9 +211,11 @@ pre {
   white-space: pre-wrap; }
 
 ol {
+  list-style-position: inside;
   list-style-type: decimal; }
 
 ul {
+  list-style-position: inside;
   list-style-type: square; }
 
 section {
