@@ -1,10 +1,10 @@
 .columns {
-  @extend .one-line;
   @extend .clearfix;
-  padding: 0 $column-width;
+  padding: $line-height $column-width;
   background: url(/images/dashes.png) center center repeat-y;
   
   & > .column {
+    @extend .fake-collapse;
     float: left;
     width: $column-width * 14;
     padding: 0 !important;

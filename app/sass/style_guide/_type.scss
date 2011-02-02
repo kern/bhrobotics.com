@@ -31,6 +31,22 @@
   text-shadow: none;
 }
 
+.nav-header-type {
+  @include font-size(14px, $line-height);
+  @extend .strong-font;
+  color: $white;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 $gray-trans;
+}
+
+.nav-link-type {
+  @include font-size(12px, $line-height);
+  @extend .body-font;
+  color: $black;
+  text-decoration: none;
+  text-shadow: none;
+}
+
 .link-type {
   @include font-size(12px, $line-height);
   @extend .body-font;

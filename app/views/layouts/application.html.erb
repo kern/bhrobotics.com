@@ -10,29 +10,34 @@
     <div id="container">
       <header id="header">
         <a href="<%= root_path %>" id="logo">BHRobotics</a>
-        <nav>
-          <ul>
+        
+        <form action="#" method="get" id="search">
+          <input type="search" placeholder="Search..." />
+        </form>
+        
+        <nav id="nav">
+          <ul class="sections">
             <li>
               <a href="<%= about_path %>">About</a>
-              <ul>
+              <ul class="subsections">
                 <li><a href="<%= about_path :action => :history %>">History</a></li>
                 <li><a href="<%= about_path :action => :fun_facts %>">Fun Facts</a></li>
                 <li><a href="<%= about_path :action => :first %>">FIRST</a></li>
               </ul>
             </li>
-          
+            
             <li>
               <a href="<%= team_path %>">Team</a>
-              <ul>
+              <ul class="subsections">
                 <li><a href="<%= members_path %>">Members</a></li>
                 <li><a href="<%= team_path :action => :robots %>">Robots</a></li>
                 <li><a href="<%= awards_path %>">Awards</a></li>
               </ul>
             </li>
-          
+            
             <li>
               <a href="<%= media_path %>">Media</a>
-              <ul>
+              <ul class="subsections">
                 <li><a href="http://bhrobotics.tumblr.com/">Blog</a></li>
                 <li><a href="http://www.facebook.com/pages/BHHS-Robotics/170502726325973">Facebook</a></li>
                 <li><a href="http://twitter.com/bhrobotics1515">Twitter</a></li>
@@ -41,10 +46,10 @@
                 <li><a href="<%= media_path :action => :documents %>">Documents</a></li>
               </ul>
             </li>
-          
+            
             <li>
               <a href="<%= community_path %>">Community</a>
-              <ul>
+              <ul class="subsections">
                 <li><a href="<%= community_path :action => :outreach %>">Outreach</a></li>
                 <li><a href="<%= community_path :action => :funding %>">Funding</a></li>
                 <li><a href="http://en.wikipedia.org/wiki">Wiki</a></li>

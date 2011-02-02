@@ -10,4 +10,46 @@
     height: $line-height * 4;
     background: url('/images/logo.png') center center no-repeat;
   }
+  
+  #search {
+    @include vertical-gradient($white, darken($white, 20%));
+    @include border-radius(10px);
+    @extend .one-line;
+    padding: ($line-height / 2) ($column-width / 2);
+    
+    input {
+      display: block;
+      width: 100%;
+      height: $line-height;
+    }
+  }
+  
+  #nav {
+    .sections {
+      @include border-radius(10px);
+      @include box-shadow(0 0 5px $gray-trans);
+      list-style-type: none;
+      
+      & > li {
+        & > a {
+          @extend .nav-header-type;
+          display: block;
+          padding: ($line-height / 2) $column-width;
+        }
+      }
+    }
+    
+    .subsections {
+      list-style-type: none;
+      margin: 0;
+      
+      & > li {
+        & > a {
+          @extend .nav-link-type;
+          display: block;
+          padding: ($line-height / 2) $column-width;
+        }
+      }
+    }
+  }
 }
