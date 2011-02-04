@@ -25,6 +25,7 @@ aside {
 h1 {
   @extend .one-line;
   @extend .h1-type;
+  margin-left: $column-width * 1;
 }
 
 h2 {
@@ -65,7 +66,7 @@ header {
 }
 
 footer {
-  @extend .two-line;
+  @extend .one-line;
   @extend .clearfix;
   position: relative;
 }

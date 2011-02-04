@@ -12,14 +12,16 @@
         <a href="<%= root_path %>" id="logo">BHRobotics</a>
         
         <form action="#" method="get" id="search">
-          <input type="search" placeholder="Search..." />
+          <label for="search">Search</label>
+          <input type="text" name="search" placeholder="Search..." />
         </form>
         
         <nav id="nav">
           <ul class="sections">
             <li>
-              <a href="<%= about_path %>">About</a>
+              <div>About</div>
               <ul class="subsections">
+                <li><a href="<%= about_path :action => :mission %>">Mission</a></li>
                 <li><a href="<%= about_path :action => :history %>">History</a></li>
                 <li><a href="<%= about_path :action => :fun_facts %>">Fun Facts</a></li>
                 <li><a href="<%= about_path :action => :first %>">FIRST</a></li>
@@ -27,7 +29,7 @@
             </li>
             
             <li>
-              <a href="<%= team_path %>">Team</a>
+              <div>Team</div>
               <ul class="subsections">
                 <li><a href="<%= members_path %>">Members</a></li>
                 <li><a href="<%= team_path :action => :robots %>">Robots</a></li>
@@ -36,7 +38,7 @@
             </li>
             
             <li>
-              <a href="<%= media_path %>">Media</a>
+              <div>Media</div>
               <ul class="subsections">
                 <li><a href="http://bhrobotics.tumblr.com/">Blog</a></li>
                 <li><a href="http://www.facebook.com/pages/BHHS-Robotics/170502726325973">Facebook</a></li>
@@ -48,7 +50,7 @@
             </li>
             
             <li>
-              <a href="<%= community_path %>">Community</a>
+              <div>Community</div>
               <ul class="subsections">
                 <li><a href="<%= community_path :action => :outreach %>">Outreach</a></li>
                 <li><a href="<%= community_path :action => :funding %>">Funding</a></li>

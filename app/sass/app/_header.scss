@@ -1,7 +1,7 @@
 #header {
   float: left;
   width: $column-width * 15;
-  margin-top: 0;
+  margin: 0;
   
   #logo {
     @extend .hide-text;
@@ -17,10 +17,13 @@
     @extend .one-line;
     padding: ($line-height / 2) ($column-width / 2);
     
+    label {
+      display: none;
+    }
+    
     input {
       display: block;
       width: 100%;
-      height: $line-height;
     }
   }
   
@@ -31,10 +34,10 @@
       list-style-type: none;
       
       & > li {
-        & > a {
+        & > div {
           @extend .nav-header-type;
-          display: block;
           padding: ($line-height / 2) $column-width;
+          background: $orange;
         }
       }
     }
@@ -47,9 +50,25 @@
         & > a {
           @extend .nav-link-type;
           display: block;
-          padding: ($line-height / 2) $column-width;
+          padding: (($line-height / 2) - 1px) $column-width;
+          background: darken($white, 10%);
+          border-top: 1px solid $white;
+          border-bottom: 1px solid darken($white, 20%);
+          
+          &:hover, &:focus {
+            background: $white;
+          }
         }
       }
+    }
+    
+    // Rounded corners
+    .sections > li:first-child > div {
+      @include border-radius(10px 10px 0 0);
+    }
+    
+    .sections > li:last-child > .subsections > li:last-child > a {
+      @include border-radius(0 0 10px 10px);
     }
   }
 }

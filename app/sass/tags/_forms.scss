@@ -35,7 +35,13 @@ input[type=email] {
 }
 
 input[type=text] {
-  
+  @extend .body-type;
+  @include box-sizing(border-box);
+  @include border-radius(5px);
+  height: $line-height;
+  border: 1px solid $gray;
+  padding: 0 5px;
+  background: $white;
 }
 
 input[type=password] {
