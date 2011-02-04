@@ -165,7 +165,9 @@ a img {
       display: none; }
     #header #search input {
       display: block;
-      width: 100%; }
+      width: 100%;
+      background: url(/images/gear.png) 1px center no-repeat;
+      padding-left: 20px; }
   #header #nav .sections {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -188,7 +190,10 @@ a img {
       border-top: 1px solid white;
       border-bottom: 1px solid #cccccc; }
       #header #nav .subsections > li > a:hover, #header #nav .subsections > li > a:focus {
-        background: white; }
+        background-color: white; }
+    #header #nav .subsections > li.current > a {
+      padding-left: 40px;
+      background: white url(/images/gear.png) 20px center no-repeat; }
   #header #nav .sections > li:first-child > div {
     -moz-border-radius: 10px 10px 0 0;
     -webkit-border-radius: 10px 10px 0 0;
@@ -279,7 +284,7 @@ input[type=text] {
   border-radius: 5px;
   -webkit-background-clip: padding-box !important;
   height: 20px;
-  border: 1px solid #555555;
+  border: 1px solid rgba(85, 85, 85, 0.5);
   padding: 0 5px;
   background: white; }
 

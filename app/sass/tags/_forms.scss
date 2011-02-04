@@ -39,7 +39,7 @@ input[type=text] {
   @include box-sizing(border-box);
   @include border-radius(5px);
   height: $line-height;
-  border: 1px solid $gray;
+  border: 1px solid transparentize($gray, 0.5);
   padding: 0 5px;
   background: $white;
 }

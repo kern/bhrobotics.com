@@ -5,6 +5,7 @@
     <%= stylesheet_link_tag :all %>
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico" />
   </head>
   <body>
     <div id="container">
@@ -21,19 +22,19 @@
             <li>
               <div>About</div>
               <ul class="subsections">
-                <li><a href="<%= about_path :action => :mission %>">Mission</a></li>
-                <li><a href="<%= about_path :action => :history %>">History</a></li>
-                <li><a href="<%= about_path :action => :fun_facts %>">Fun Facts</a></li>
-                <li><a href="<%= about_path :action => :first %>">FIRST</a></li>
+                <li <%= tab_class('Mission') %>><a href="<%= about_path :action => :mission %>">Mission</a></li>
+                <li <%= tab_class('History') %>><a href="<%= about_path :action => :history %>">History</a></li>
+                <li <%= tab_class('Fun Facts') %>><a href="<%= about_path :action => :fun_facts %>">Fun Facts</a></li>
+                <li <%= tab_class('FIRST') %>><a href="<%= about_path :action => :first %>">FIRST</a></li>
               </ul>
             </li>
             
             <li>
               <div>Team</div>
               <ul class="subsections">
-                <li><a href="<%= members_path %>">Members</a></li>
-                <li><a href="<%= team_path :action => :robots %>">Robots</a></li>
-                <li><a href="<%= awards_path %>">Awards</a></li>
+                <li <%= tab_class('Members') %>><a href="<%= members_path %>">Members</a></li>
+                <li <%= tab_class('Robots') %>><a href="<%= team_path :action => :robots %>">Robots</a></li>
+                <li <%= tab_class('Awards') %>><a href="<%= awards_path %>">Awards</a></li>
               </ul>
             </li>
             
@@ -45,15 +46,15 @@
                 <li><a href="http://twitter.com/bhrobotics1515">Twitter</a></li>
                 <li><a href="http://picasaweb.google.com/bhroboticsweb">Photos</a></li>
                 <li><a href="http://vimeo.com/mortorq">Videos</a></li>
-                <li><a href="<%= media_path :action => :documents %>">Documents</a></li>
+                <li <%= tab_class('Documents') %>><a href="<%= media_path :action => :documents %>">Documents</a></li>
               </ul>
             </li>
             
             <li>
               <div>Community</div>
               <ul class="subsections">
-                <li><a href="<%= community_path :action => :outreach %>">Outreach</a></li>
-                <li><a href="<%= community_path :action => :funding %>">Funding</a></li>
+                <li <%= tab_class('Outreach') %>><a href="<%= community_path :action => :outreach %>">Outreach</a></li>
+                <li <%= tab_class('Funding') %>><a href="<%= community_path :action => :funding %>">Funding</a></li>
                 <li><a href="http://en.wikipedia.org/wiki">Wiki</a></li>
               </ul>
             </li>

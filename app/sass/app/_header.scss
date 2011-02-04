@@ -24,6 +24,8 @@
     input {
       display: block;
       width: 100%;
+      background: url(/images/gear.png) 1px center no-repeat;
+      padding-left: $column-width;
     }
   }
   
@@ -56,8 +58,13 @@
           border-bottom: 1px solid darken($white, 20%);
           
           &:hover, &:focus {
-            background: $white;
+            background-color: $white;
           }
+        }
+        
+        &.current > a {
+          padding-left: $column-width * 2;
+          background: $white url(/images/gear.png) $line-height center no-repeat;
         }
       }
     }
