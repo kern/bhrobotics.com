@@ -3,18 +3,26 @@
   <head>
     <title><%= title %></title>
     <%= stylesheet_link_tag :all %>
-    <%= javascript_include_tag :defaults %>
+    <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js' %>
+    <%= javascript_include_tag 'rails' %>
+    <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tag %>
     <link rel="shortcut icon" href="http://localhost:3000/favicon.ico" />
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
     <div id="container">
       <header id="header">
         <a href="<%= root_path %>" id="logo">BHRobotics</a>
         
-        <form action="#" method="get" id="search">
-          <label for="search">Search</label>
-          <input type="text" name="search" placeholder="Search..." />
+        <form action="http://www.google.com/cse" method="get" id="search">
+          <input type="hidden" name="cx" value="003728954128623963987:ymxoqiqvkry" />
+          <input type="hidden" name="ie" value="UTF-8" />
+          <label for="q">Search</label>
+          <input type="text" name="q" placeholder="Search..." />
         </form>
         
         <nav id="nav">
@@ -67,7 +75,7 @@
       </div>
       
       <footer id="footer">
-        <small>&copy; Copyright 2005-2010 BHRobotics - All Rights Reserved.</small>
+        <small>&copy; Copyright 2005-2010 BHRobotics - All Rights Reserved. See a problem? <a href="mailto:contact@bhrobotics.com">Contact us.</a></small>
       </footer>
     </div>
   </body>
