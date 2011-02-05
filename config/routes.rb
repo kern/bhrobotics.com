@@ -1,10 +1,7 @@
 BhroboticsCom::Application.routes.draw do
   root :to => 'welcome#index'
   
-  scope '/team' do
-    resources :members
-    resources :awards
-  end
+  resources :members, :scope => '/team'
   
   match 'about/:action',     :controller => :about,     :as => :about
   match 'team/:action',      :controller => :team,      :as => :team

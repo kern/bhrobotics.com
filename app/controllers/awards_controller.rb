@@ -1,2 +1,0 @@
-class AwardsController < ApplicationController
-end
