@@ -1,0 +1,15 @@
+#main {
+  @include border-radius(10px);
+  @include box-shadow(0 0 5px $gray-trans);
+  @extend .clearfix;
+  position: relative;
+  float: left;
+  width: $column-width * 32;
+  margin-left: $column-width;
+  background: darken($white, 10%);
+  
+  section {
+    @include border-radius(10px);
+    padding: 0 $column-width;
+  }
+}

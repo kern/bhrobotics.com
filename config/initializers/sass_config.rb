@@ -1,0 +1,1 @@
+Sass::Plugin.options[:template_location] = Rails.root.join('app', 'sass').to_s

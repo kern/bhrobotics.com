@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Titillium Text';
+  src: url('/fonts/Titillium%20Text.eot');
+  src: local('☺'), url('/fonts/Titillium%20Text.woff') format('woff'), url('/fonts/Titillium%20Text.ttf') format('truetype');
+}
+
+.strong-font {
+  font-family: 'Titillium Text', sans-serif;
+  font-weight: bold;
+}
+
+.emphasized-font {
+  font-family: 'Titillium Text', sans-serif;
+  font-weight: normal;
+}
+
+.body-font {
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+.pre-font {
+  font-family: monospace;
+  font-weight: normal;
+}

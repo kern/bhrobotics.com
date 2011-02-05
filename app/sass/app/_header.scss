@@ -1,0 +1,81 @@
+#header {
+  float: left;
+  width: $column-width * 15;
+  margin: 0;
+  
+  #logo {
+    @extend .hide-text;
+    display: block;
+    width: $column-width * 15;
+    height: $line-height * 4;
+    background: url('/images/logo.png') center center no-repeat;
+  }
+  
+  #search {
+    @include vertical-gradient($white, darken($white, 20%));
+    @include border-radius(10px);
+    @extend .one-line;
+    padding: ($line-height / 2) ($column-width / 2);
+    
+    label {
+      display: none;
+    }
+    
+    input {
+      display: block;
+      width: 100%;
+      background: url(/images/gear.png) 1px center no-repeat;
+      padding-left: $column-width;
+    }
+  }
+  
+  #nav {
+    .sections {
+      @include border-radius(10px);
+      @include box-shadow(0 0 5px $gray-trans);
+      list-style-type: none;
+      
+      & > li {
+        & > div {
+          @extend .nav-header-type;
+          padding: ($line-height / 2) $column-width;
+          background: $orange;
+        }
+      }
+    }
+    
+    .subsections {
+      list-style-type: none;
+      margin: 0;
+      
+      & > li {
+        & > a {
+          @extend .nav-link-type;
+          display: block;
+          padding: (($line-height / 2) - 1px) $column-width;
+          background: darken($white, 10%);
+          border-top: 1px solid $white;
+          border-bottom: 1px solid darken($white, 20%);
+          
+          &:hover, &:focus {
+            background-color: $white;
+          }
+        }
+        
+        &.current > a {
+          padding-left: $column-width * 2;
+          background: $white url(/images/gear.png) $line-height center no-repeat;
+        }
+      }
+    }
+    
+    // Rounded corners
+    .sections > li:first-child > div {
+      @include border-radius(10px 10px 0 0);
+    }
+    
+    .sections > li:last-child > .subsections > li:last-child > a {
+      @include border-radius(0 0 10px 10px);
+    }
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js' %>
+    <%= javascript_include_tag 'rails' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tag %>
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico" />
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="container">
+      <header id="header">
+        <a href="<%= root_path %>" id="logo">BHRobotics</a>
+        
+        <form action="http://www.google.com/cse" method="get" id="search">
+          <input type="hidden" name="cx" value="003728954128623963987:ymxoqiqvkry" />
+          <input type="hidden" name="ie" value="UTF-8" />
+          <label for="q">Search</label>
+          <input type="text" name="q" placeholder="Search..." />
+        </form>
+        
+        <nav id="nav">
+          <ul class="sections">
+            <li>
+              <div>About</div>
+              <ul class="subsections">
+                <li <%= tab_class('Mission') %>><a href="<%= about_path :action => :mission %>">Mission</a></li>
+                <li <%= tab_class('History') %>><a href="<%= about_path :action => :history %>">History</a></li>
+                <li <%= tab_class('Fun Facts') %>><a href="<%= about_path :action => :fun_facts %>">Fun Facts</a></li>
+                <li <%= tab_class('FIRST') %>><a href="<%= about_path :action => :first %>">FIRST</a></li>
+              </ul>
+            </li>
+            
+            <li>
+              <div>Team</div>
+              <ul class="subsections">
+                <li <%= tab_class('Members') %>><a href="<%= members_path %>">Members</a></li>
+                <li <%= tab_class('Robots') %>><a href="<%= team_path :action => :robots %>">Robots</a></li>
+                <li <%= tab_class('Awards') %>><a href="<%= team_path :action => :awards %>">Awards</a></li>
+              </ul>
+            </li>
+            
+            <li>
+              <div>Media</div>
+              <ul class="subsections">
+                <li><a href="http://bhrobotics.tumblr.com/">Blog</a></li>
+                <li><a href="http://www.facebook.com/pages/BHHS-Robotics/170502726325973">Facebook</a></li>
+                <li><a href="http://twitter.com/bhrobotics1515">Twitter</a></li>
+                <li><a href="http://picasaweb.google.com/bhroboticsweb">Photos</a></li>
+                <li><a href="http://vimeo.com/mortorq">Videos</a></li>
+                <li <%= tab_class('Documents') %>><a href="<%= media_path :action => :documents %>">Documents</a></li>
+              </ul>
+            </li>
+            
+            <li>
+              <div>Community</div>
+              <ul class="subsections">
+                <li <%= tab_class('Outreach') %>><a href="<%= community_path :action => :outreach %>">Outreach</a></li>
+                <li <%= tab_class('Funding') %>><a href="<%= community_path :action => :funding %>">Funding</a></li>
+                <li><a href="http://en.wikipedia.org/wiki">Wiki</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      
+      <div id="main">
+        <%= yield %>
+      </div>
+      
+      <footer id="footer">
+        <small>&copy; Copyright 2005-2010 BHRobotics - All Rights Reserved. See a problem? <a href="mailto:contact@bhrobotics.com">Contact us.</a></small>
+      </footer>
+    </div>
+  </body>
+</html>
