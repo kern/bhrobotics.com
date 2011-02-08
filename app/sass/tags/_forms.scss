@@ -38,10 +38,13 @@ input[type=text] {
   @extend .body-type;
   @include box-sizing(border-box);
   @include border-radius(5px);
+  display: block;
+  width: 100%;
   height: $line-height;
   border: 1px solid transparentize($gray, 0.5);
   padding: 0 5px;
   background: $white;
+  line-height: $line-height - 2px;
 }
 
 input[type=password] {
