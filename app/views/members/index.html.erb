@@ -4,7 +4,12 @@
 
 <section>
   <ul>
-    <li>asdf</li>
-    <li>asdf</li>
+    <li><%= link_to 'Add member', new_member_path %></li>
+  </ul>
+  
+  <ul>
+    <% @members.each do |member| %>
+      <li><%= link_to member.name, member_path(@member) %> - <%= link_to 'Edit', edit_member_path(@member) %> - <%= button_to 'Delete', member_path(@member), :method => :delete %></li>
+    <% end %>
   </ul>
 </section>
