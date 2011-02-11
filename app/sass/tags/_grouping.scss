@@ -44,9 +44,17 @@ dd {
 }
 
 figure {
-  
+  @include border-radius(5px);
+  float: right;
+  padding: 9px;
+  margin: 0 0 $line-height $column-width;
+  border: 1px solid darken($white, 30%);
+  background: darken($white, 20%);
 }
 
 figcaption {
-  
+  @extend .body-type;
+  position: relative;
+  top: $line-height / 4;
+  text-align: center;
 }

@@ -64,7 +64,7 @@ a img {
   font-family: 'Titillium Text', sans-serif;
   font-weight: normal; }
 
-.body-font, .body-type, html, input[type=text], .nav-link-type, #header #nav .subsections > li > a, .link-type, a, .note-type, small {
+.body-font, .body-type, html, input[type=text], figcaption, .nav-link-type, #header #nav .subsections > li > a, .link-type, a, .note-type, small {
   font-family: sans-serif;
   font-weight: normal; }
 
@@ -94,7 +94,7 @@ a img {
   text-decoration: none;
   text-shadow: none; }
 
-.body-type, html, input[type=text] {
+.body-type, html, input[type=text], figcaption {
   font-size: 12px;
   line-height: 20px;
   color: #333333;
@@ -248,6 +248,9 @@ a img {
     .columns > .column + .column {
       float: right; }
 
+section > .columns {
+  padding: 20px 0; }
+
 html {
   position: relative;
   background: url("/images/background-texture.png"); }
@@ -299,6 +302,22 @@ ol {
 ul {
   list-style-position: inside;
   list-style-type: square; }
+
+figure {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box !important;
+  float: right;
+  padding: 9px;
+  margin: 0 0 20px 20px;
+  border: 1px solid #b3b3b3;
+  background: #cccccc; }
+
+figcaption {
+  position: relative;
+  top: 5px;
+  text-align: center; }
 
 section {
   position: relative; }
