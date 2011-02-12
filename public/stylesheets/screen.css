@@ -394,7 +394,7 @@ figure {
     border-radius: 0;
     -webkit-background-clip: padding-box !important;
     float: none;
-    margin: 20px auto 20px;
+    margin: 0;
     padding: 9px 0;
     border-left: 0;
     border-right: 0; }
