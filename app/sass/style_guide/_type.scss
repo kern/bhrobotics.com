@@ -67,6 +67,18 @@
   text-shadow: 0 -1px 0 $gray-trans;
 }
 
+.note-link-type {
+  @include font-size(10px, $line-height);
+  @extend .body-font;
+  color: $orange;
+  text-decoration: underline;
+  text-shadow: none;
+  
+  &:hover {
+    color: lighten($orange, 10%);
+  }
+}
+
 .pre-type {
   @include font-size(12px, $line-height);
   @extend .pre-font;

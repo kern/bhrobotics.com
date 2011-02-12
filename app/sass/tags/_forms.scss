@@ -10,6 +10,10 @@ legend {
   
 }
 
+.field, .actions {
+  @extend .one-line;
+}
+
 label {
   
 }
@@ -48,7 +52,7 @@ input[type=text] {
 }
 
 input[type=password] {
-  
+  @extend input[type=text];
 }
 
 input[type=datetime] {
@@ -76,7 +80,7 @@ input[type=datetime-local] {
 }
 
 input[type=number] {
-  
+  @extend input[type=text];
 }
 
 input[type=range] {
@@ -88,7 +92,8 @@ input[type=color] {
 }
 
 input[type=checkbox] {
-  
+  font-size: $line-height;
+  margin-right: $column-width / 2;
 }
 
 input[type=radio] {
@@ -116,7 +121,7 @@ input[type=button] {
 }
 
 button {
-  
+  @extend .action-button;
 }
 
 select {
@@ -136,7 +141,22 @@ option {
 }
 
 textarea {
-  
+  @extend .body-type;
+  @include box-sizing(border-box);
+  @include border-radius(5px);
+  display: block;
+  width: 100%;
+  height: $line-height * 5;
+  border: 1px solid transparentize($gray, 0.5);
+  padding: 0 5px;
+  background: $white;
+  line-height: $line-height - 2px;
+}
+
+.field-with-errors {
+  input, textarea {
+    background: lighten($red, 35%);
+  }
 }
 
 keygen {

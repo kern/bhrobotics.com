@@ -1,7 +1,14 @@
-BhroboticsCom::Application.routes.draw do
+BHRobotics::Application.routes.draw do
   root :to => 'welcome#index'
   
-  resources :members, :scope => '/team'
+  resource :session, :controller => :session
+  
+  scope '/team' do
+    resources :members
+  end
+  
+  match '/sign-in' => 'session#show'
+  match '/sign-out' => 'session#destroy'
   
   match 'about/:action',     :controller => :about,     :as => :about
   match 'team/:action',      :controller => :team,      :as => :team
