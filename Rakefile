@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-BhroboticsCom::Application.load_tasks
+BHRobotics::Application.load_tasks

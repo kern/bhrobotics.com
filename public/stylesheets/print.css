@@ -10,7 +10,7 @@ h5, h6, pre, form, p, blockquote, fieldset, input {
   content: '';
   clear: both; }
 
-.clickable {
+.clickable, .button, .action-button, .back-button, button, .action-button:hover, .back-button:hover, button:hover, .action-button:focus, .back-button:focus, button:focus, .action-button:active, .back-button:active, button:active {
   cursor: pointer; }
 
 .unclickable {
@@ -40,7 +40,7 @@ footer, header, hgroup, menu, nav, section, summary {
 a img {
   border: none; }
 
-.one-line, #header #search, p, pre, blockquote, ol, ul, dl, section, nav, h1, h2, h3, h4, h5, h6, hgroup, footer {
+.one-line, #header #search, #main > header, .field, .actions, p, pre, blockquote, ol, ul, dl, section, nav, h1, h2, h3, h4, h5, h6, hgroup, footer {
   margin-top: 20px;
   margin-bottom: 20px; }
 
@@ -53,18 +53,18 @@ a img {
 
 @font-face {
   font-family: 'Titillium Text';
-  src: url("/fonts/Titillium%20Text.eot");
-  src: local("☺"), url("/fonts/Titillium%20Text.woff") format("woff"), url("/fonts/Titillium%20Text.ttf") format("truetype"); }
+  src: url("/fonts/Titillium-Text.eot");
+  src: local("☺"), url("/fonts/Titillium-Text.woff") format("woff"), url("/fonts/Titillium-Text.ttf") format("truetype"); }
 
 .strong-font, .h1-type, h1, .nav-header-type, #header #nav .sections > li > div {
   font-family: 'Titillium Text', sans-serif;
   font-weight: bold; }
 
-.emphasized-font, .h2-type, h2, .h3-type, h3, h4, h5, h6 {
+.emphasized-font, .h2-type, h2, .h3-type, .button, .action-button, .back-button, button, .action-button:hover, .back-button:hover, button:hover, .action-button:focus, .back-button:focus, button:focus, .action-button:active, .back-button:active, button:active, h3, h4, h5, h6 {
   font-family: 'Titillium Text', sans-serif;
   font-weight: normal; }
 
-.body-font, .body-type, html, input[type=text], figcaption, .nav-link-type, #header #nav .subsections > li > a, .link-type, a, .note-type, small {
+.body-font, .body-type, html, input[type=text], input[type=password], input[type=number], textarea, figcaption, .nav-link-type, #header #nav .subsections > li > a, .link-type, a, .note-type, small, .note-link-type, #footer a {
   font-family: sans-serif;
   font-weight: normal; }
 
@@ -87,14 +87,14 @@ a img {
   text-decoration: none;
   text-shadow: none; }
 
-.h3-type, h3, h4, h5, h6 {
+.h3-type, .button, .action-button, .back-button, button, .action-button:hover, .back-button:hover, button:hover, .action-button:focus, .back-button:focus, button:focus, .action-button:active, .back-button:active, button:active, h3, h4, h5, h6 {
   font-size: 18px;
   line-height: 20px;
   color: #333333;
   text-decoration: none;
   text-shadow: none; }
 
-.body-type, html, input[type=text], figcaption {
+.body-type, html, input[type=text], input[type=password], input[type=number], textarea, figcaption {
   font-size: 12px;
   line-height: 20px;
   color: #333333;
@@ -130,6 +130,15 @@ a img {
   color: white;
   text-decoration: none;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3); }
+
+.note-link-type, #footer a {
+  font-size: 10px;
+  line-height: 20px;
+  color: #ff6f29;
+  text-decoration: underline;
+  text-shadow: none; }
+  .note-link-type:hover, #footer a:hover {
+    color: #ff915c; }
 
 .pre-type {
   font-size: 12px;
@@ -222,6 +231,16 @@ a img {
     border-radius: 10px;
     -webkit-background-clip: padding-box !important;
     padding: 0 20px; }
+  #main > header {
+    padding: 0 20px; }
+    #main > header .action-button, #main > header .back-button, #main > header button {
+      float: right; }
+    #main > header .back-button {
+      float: left;
+      margin-right: 20px; }
+    #main > header h1 {
+      display: inline-block;
+      margin: 0; }
 
 #footer {
   float: left;
@@ -251,6 +270,41 @@ a img {
 section > .columns {
   padding: 20px 0; }
 
+.button, .action-button, .back-button, button, .action-button:hover, .back-button:hover, button:hover, .action-button:focus, .back-button:focus, button:focus, .action-button:active, .back-button:active, button:active {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box !important;
+  display: inline-block;
+  vertical-align: top;
+  padding: 9px;
+  border: 1px solid #cccccc; }
+
+.action-button, .back-button, button {
+  background-color: white;
+  background-image: -moz-linear-gradient(top, white, #cccccc);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, white), color-stop(1, #cccccc));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#cccccc');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#cccccc')"; }
+  .action-button:hover, .back-button:hover, button:hover, .action-button:focus, .back-button:focus, button:focus {
+    background-color: white;
+    background-image: -moz-linear-gradient(top, white, #e6e6e6);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, white), color-stop(1, #e6e6e6));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#e6e6e6');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#e6e6e6')"; }
+  .action-button:active, .back-button:active, button:active {
+    background-color: #e6e6e6;
+    background-image: -moz-linear-gradient(top, #e6e6e6, white);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e6e6e6), color-stop(1, white));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#e6e6e6', EndColorStr='white');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#e6e6e6', EndColorStr='white')"; }
+
+.back-button:before {
+  content: '< '; }
+
 html {
   position: relative;
   background: url("/images/background-texture.png"); }
@@ -276,7 +330,7 @@ object {
 video {
   display: block; }
 
-input[type=text] {
+input[type=text], input[type=password], input[type=number] {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -291,6 +345,29 @@ input[type=text] {
   padding: 0 5px;
   background: white;
   line-height: 18px; }
+
+input[type=checkbox] {
+  font-size: 20px;
+  margin-right: 10px; }
+
+textarea {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box !important;
+  display: block;
+  width: 100%;
+  height: 100px;
+  border: 1px solid rgba(85, 85, 85, 0.5);
+  padding: 0 5px;
+  background: white;
+  line-height: 18px; }
+
+.field-with-errors input, .field-with-errors textarea {
+  background: #ffb3b3; }
 
 pre {
   white-space: pre-wrap; }
@@ -313,6 +390,18 @@ figure {
   margin: 0 0 20px 20px;
   border: 1px solid #b3b3b3;
   background: #cccccc; }
+  figure.emphasized {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-background-clip: padding-box !important;
+    float: none;
+    margin: 20px auto 20px;
+    padding: 9px 0;
+    border-left: 0;
+    border-right: 0; }
+    figure.emphasized img {
+      margin: 0 auto; }
 
 figcaption {
   position: relative;

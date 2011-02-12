@@ -50,6 +50,19 @@ figure {
   margin: 0 0 $line-height $column-width;
   border: 1px solid darken($white, 30%);
   background: darken($white, 20%);
+  
+  &.emphasized {
+    @include border-radius(0);
+    float: none;
+    margin: $line-height auto $line-height;
+    padding: 9px 0;
+    border-left: 0;
+    border-right: 0;
+    
+    img {
+      margin: 0 auto;
+    }
+  }
 }
 
 figcaption {
