@@ -51,7 +51,7 @@ figure {
   border: 1px solid darken($white, 30%);
   background: darken($white, 20%);
   
-  &.emphasized {
+  &.banner {
     @include border-radius(0);
     float: none;
     margin: $line-height auto $line-height;

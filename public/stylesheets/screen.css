@@ -53,8 +53,7 @@ a img {
 
 @font-face {
   font-family: 'Titillium Text';
-  src: url("/fonts/Titillium-Text.eot");
-  src: local("☺"), url("/fonts/Titillium-Text.woff") format("woff"), url("/fonts/Titillium-Text.ttf") format("truetype"); }
+  src: url("/fonts/Titillium-Text.eot?") format("eot"), url("/fonts/Titillium-Text.woff") format("woff"), url("/fonts/Titillium-Text.ttf") format("truetype"), url("/fonts/Titillium-Text.svg#webfont6DvUnnR2") format("svg"); }
 
 .strong-font, .h1-type, h1, .nav-header-type, #header #nav .sections > li > div {
   font-family: 'Titillium Text', sans-serif;
@@ -199,8 +198,7 @@ a img {
       #header #nav .subsections > li > a:hover, #header #nav .subsections > li > a:focus {
         background-color: white; }
     #header #nav .subsections > li.current > a {
-      padding-left: 40px;
-      background: white url(/images/gear.png) 20px center no-repeat; }
+      background: white url(/images/gear.png) 265px center no-repeat; }
   #header #nav .sections > li:first-child > div {
     -moz-border-radius: 10px 10px 0 0;
     -webkit-border-radius: 10px 10px 0 0;
@@ -390,7 +388,7 @@ figure {
   margin: 0 0 20px 20px;
   border: 1px solid #b3b3b3;
   background: #cccccc; }
-  figure.emphasized {
+  figure.banner {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
@@ -400,7 +398,7 @@ figure {
     padding: 9px 0;
     border-left: 0;
     border-right: 0; }
-    figure.emphasized img {
+    figure.banner img {
       margin: 0 auto; }
 
 figcaption {

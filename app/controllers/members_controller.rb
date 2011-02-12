@@ -16,6 +16,7 @@ class MembersController < ApplicationController
     authorize! :create, @member
     
     if @member.save
+      expire_fragment 'all_members'
       redirect_to @member
     else
       render :action => :new
@@ -33,6 +34,7 @@ class MembersController < ApplicationController
     authorize! :update, @member
     
     if @member.save
+      expire_fragment 'all_members'
       redirect_to @member
     else
       render :action => :edit
@@ -49,6 +51,7 @@ class MembersController < ApplicationController
     authorize! :destroy, @member
     
     @member.destroy
+    expire_fragment 'all_members'
     redirect_to :action => :index
   end
 end
