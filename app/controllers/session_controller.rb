@@ -6,7 +6,7 @@ class SessionController < ApplicationController
   def create
     if params[:password] == PASSWORD
       self.current_user = :admin
-      redirect_to root_path
+      redirect_to members_path
     else
       render :action => :show
     end
@@ -14,6 +14,6 @@ class SessionController < ApplicationController
   
   def destroy
     self.current_user = nil
-    redirect_to root_path
+    redirect_to members_path
   end
 end

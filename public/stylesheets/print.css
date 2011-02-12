@@ -199,8 +199,7 @@ a img {
       #header #nav .subsections > li > a:hover, #header #nav .subsections > li > a:focus {
         background-color: white; }
     #header #nav .subsections > li.current > a {
-      padding-left: 40px;
-      background: white url(/images/gear.png) 20px center no-repeat; }
+      background: white url(/images/gear.png) 265px center no-repeat; }
   #header #nav .sections > li:first-child > div {
     -moz-border-radius: 10px 10px 0 0;
     -webkit-border-radius: 10px 10px 0 0;

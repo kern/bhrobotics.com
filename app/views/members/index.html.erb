@@ -13,28 +13,30 @@
 </figure>
  
 <div class="columns">
-  <section class="column">
-    <h2>Students</h2>
-    <ul>
-      <% @students.each do |student| %>
-        <li><%= link_to student.name, member_path(student) %></li>
-      <% end %>
-    </ul>
+  <% cache 'all_members' do %>
+    <section class="column">
+      <h2>Students</h2>
+      <ul>
+        <% @students.each do |student| %>
+          <li><%= link_to student.name, member_path(student) %></li>
+        <% end %>
+      </ul>
+      
+      <h2>Mentors</h2>
+      <ul>
+        <% @mentors.each do |mentor| %>
+          <li><%= link_to mentor.name, member_path(mentor) %></li>
+        <% end %>
+      </ul>
+    </section>
     
-    <h2>Mentors</h2>
-    <ul>
-      <% @mentors.each do |mentor| %>
-        <li><%= link_to mentor.name, member_path(mentor) %></li>
-      <% end %>
-    </ul>
-  </section>
-  
-  <section class="column">
-    <h2>Alumni</h2>
-    <ul>
-      <% @alumni.each do |alumnus| %>
-        <li><%= link_to alumnus.name, member_path(alumnus) %></li>
-      <% end %>
-    </ul>
-  </section>
+    <section class="column">
+      <h2>Alumni</h2>
+      <ul>
+        <% @alumni.each do |alumnus| %>
+          <li><%= link_to alumnus.name, member_path(alumnus) %></li>
+        <% end %>
+      </ul>
+    </section>
+  <% end %>
 </div>

@@ -61,8 +61,7 @@
         }
         
         &.current > a {
-          padding-left: $column-width * 2;
-          background: $white url(/images/gear.png) $line-height center no-repeat;
+          background: $white url(/images/gear.png) 265px center no-repeat;
         }
       }
     }
