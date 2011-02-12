@@ -21,16 +21,16 @@
           <li><%= link_to student.name, member_path(student) %></li>
         <% end %>
       </ul>
-      
+    </section>
+    
+    <section class="column">
       <h2>Mentors</h2>
       <ul>
         <% @mentors.each do |mentor| %>
           <li><%= link_to mentor.name, member_path(mentor) %></li>
         <% end %>
       </ul>
-    </section>
-    
-    <section class="column">
+      
       <h2>Alumni</h2>
       <ul>
         <% @alumni.each do |alumnus| %>
