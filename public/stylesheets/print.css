@@ -388,7 +388,7 @@ figure {
   margin: 0 0 20px 20px;
   border: 1px solid #b3b3b3;
   background: #cccccc; }
-  figure.emphasized {
+  figure.banner {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
@@ -398,7 +398,7 @@ figure {
     padding: 9px 0;
     border-left: 0;
     border-right: 0; }
-    figure.emphasized img {
+    figure.banner img {
       margin: 0 auto; }
 
 figcaption {

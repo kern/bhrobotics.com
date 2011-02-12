@@ -6,7 +6,7 @@
 </header>
 
 <% unless @member.picture_url.blank? %>
-  <figure class="emphasized">
+  <figure class="banner">
     <%= image_tag @member.picture_url, :alt => @member.name %>
   </figure>
 <% end %>
