@@ -3,17 +3,17 @@ class Member < ActiveRecord::Base
   validates :year, :numericality => { :greater_than_or_equal_to => 2005 }, :presence => true
   
   def self.mentors
-    where(:mentor => true)
+    where(:mentor => true).order('name ASC')
   end
   
   def self.students
     current_year = Time.now.year
-    where(:mentor => false).where('year >= ?', current_year)
+    where(:mentor => false).where('year >= ?', current_year).order('name ASC')
   end
   
   def self.alumni
     current_year = Time.now.year
-    where(:mentor => false).where('year < ?', current_year)
+    where(:mentor => false).where('year < ?', current_year).order('name ASC')
   end
   
   def position
