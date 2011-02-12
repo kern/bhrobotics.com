@@ -53,8 +53,7 @@ a img {
 
 @font-face {
   font-family: 'Titillium Text';
-  src: url("/fonts/Titillium-Text.eot");
-  src: local("☺"), url("/fonts/Titillium-Text.woff") format("woff"), url("/fonts/Titillium-Text.ttf") format("truetype"); }
+  src: url("/fonts/Titillium-Text.eot?") format("eot"), url("/fonts/Titillium-Text.woff") format("woff"), url("/fonts/Titillium-Text.ttf") format("truetype"), url("/fonts/Titillium-Text.svg#webfont6DvUnnR2") format("svg"); }
 
 .strong-font, .h1-type, h1, .nav-header-type, #header #nav .sections > li > div {
   font-family: 'Titillium Text', sans-serif;
