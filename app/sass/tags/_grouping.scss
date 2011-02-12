@@ -54,7 +54,7 @@ figure {
   &.banner {
     @include border-radius(0);
     float: none;
-    margin: $line-height auto $line-height;
+    margin: 0;
     padding: 9px 0;
     border-left: 0;
     border-right: 0;
