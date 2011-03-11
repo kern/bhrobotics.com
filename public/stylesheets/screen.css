@@ -4,7 +4,7 @@ h5, h6, pre, form, p, blockquote, fieldset, input {
   border: 0;
   padding: 0; }
 
-.clearfix:after, #container:after, #main:after, .columns:after, section:after, nav:after, article:after, aside:after, hgroup:after, header:after, footer:after, address:after {
+.clearfix:after, #container:after, #main:after, .columns:after, section#website-awards:after, section:after, nav:after, article:after, aside:after, hgroup:after, header:after, footer:after, address:after {
   display: block;
   height: 0;
   content: '';
@@ -267,6 +267,20 @@ a img {
 
 section > .columns {
   padding: 20px 0; }
+
+section#website-awards {
+  -moz-border-radius: 0 0 10px 10px;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+  -webkit-background-clip: padding-box !important;
+  margin-bottom: 0;
+  border-top: #555555 1px solid;
+  padding: 20px 20px 0;
+  background: #cccccc;
+  text-align: center; }
+  section#website-awards img {
+    display: inline-block;
+    margin: 0 5px 20px; }
 
 .button, .action-button, .back-button, button, .action-button:hover, .back-button:hover, button:hover, .action-button:focus, .back-button:focus, button:focus, .action-button:active, .back-button:active, button:active {
   -moz-box-sizing: border-box;

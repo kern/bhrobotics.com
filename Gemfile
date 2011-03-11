@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rails', '3.0.5'
 gem 'sass', '~> 3.0'
 gem 'jquery-rails', '~> 0.2'
 gem 'cancan', '~> 1.5'
