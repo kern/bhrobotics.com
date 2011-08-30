@@ -1,3 +1,3 @@
 class AboutController < ApplicationController
-  caches_page :first, :fun_facts, :history, :mission
+  caches_page :contact_us, :first, :fun_facts, :history, :mission
 end
