@@ -1,0 +1,16 @@
+<% title 'Create Member' %>
+
+<header>
+  <%= link_to 'Back', members_path, :class => 'back-button' %>
+  <h1>Create Member</h1>
+</header>
+
+<section>
+  <%= form_for @member do |f| %>
+    <%= render :partial => 'form', :locals => { :f => f } %>
+    
+    <div class="actions">
+      <button type="submit">Create member</button>
+    </div>
+  <% end %>
+</section>

@@ -1,0 +1,17 @@
+<% title 'Sign In' %>
+
+<h1>Sign In</h1>
+
+<section>
+  <p>What's the password?</p>
+  <%= form_tag session_path, :method => :post do %>
+    <div class="field">
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
+    </div>
+    
+    <div class="actions">
+      <button type="submit">Sign in</button>
+    </div>
+  <% end %>
+</section>
