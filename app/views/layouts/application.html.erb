@@ -36,7 +36,7 @@
 	        
             <li>
               <div>About</div>
-              <ul id="submenu" class="subsections">
+              <ul id="submenu" class="subsections" class="expandfirst">
                 <li <%= tab_class('Mission') %>><a href="<%= about_path :action => :mission %>">Mission</a></li>
                 <li <%= tab_class('History') %>><a href="<%= about_path :action => :history %>">History</a></li>
                 <li <%= tab_class('Fun Facts') %>><a href="<%= about_path :action => :fun_facts %>">Fun Facts</a></li>
@@ -68,7 +68,7 @@
             </li>
             
             <li>
-              <div>Community</div>
+              <div class="lastly">Community</div>
               <ul id="submenu4" class="subsections">
                 <li <%= tab_class('Outreach') %>><a href="<%= community_path :action => :outreach %>">Outreach</a></li>
                 <li <%= tab_class('Funding') %>><a href="<%= community_path :action => :funding %>">Funding</a></li>

@@ -57,12 +57,17 @@ a img {
 
 .strong-font, .h1-type, h1, .nav-header-type, #header #nav .sections > li > div {
   font-family: 'Titillium Text', sans-serif;
-  font-weight: bold; }
+  font-weight: bold; 
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+	}
 /*.strong-font, .h1-type, h1, .nav-header-type, #header #nav .sections > li:last-child {
 	moz-border-radius: 0 0 10px 10px;
 	-webkit-border-radius: 0 0 10px 10px;
 	border-radius: 0 0 10px 10px;
 }*/
+
+
 .emphasized-font, .h2-type, h2, .h3-type, .button, .action-button, .back-button, button, .action-button:hover, .back-button:hover, button:hover, .action-button:focus, .back-button:focus, button:focus, .action-button:active, .back-button:active, button:active, h3, h4, h5, h6 {
   font-family: 'Titillium Text', sans-serif;
   font-weight: normal; }
@@ -156,7 +161,8 @@ a img {
 #header {
   float: left;
   width: 300px;
-  margin: 0; }
+  margin: 0;
+}
   #header #logo {
     display: block;
     width: 300px;
@@ -467,3 +473,12 @@ i {
 b {
   font-weight: bold; }
 
+
+.lastly {
+	moz-border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
+}
+
+.expandfirst {
+}

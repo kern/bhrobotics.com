@@ -25,5 +25,8 @@ function initMenus() {
 			}
 		}
 	);
+	$('ul.sections li div.lastly').click(function() {$('ul.sections li div.lastly').removeClass('lastly')});
+
+
 }
 $(document).ready(function() {initMenus();});
