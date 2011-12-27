@@ -24,8 +24,12 @@ function initMenus() {
 				return false;
 			}
 		}
+	
+
 	);
 	$('ul.sections li div.lastly').click(function() {$('ul.sections li div.lastly').removeClass('lastly')});
+	$('ul.sections li div.notlast').click(function() {$('ul.sections li div.last').addClass('lastly')});
+	
 
 
 }
