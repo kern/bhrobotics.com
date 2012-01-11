@@ -38,7 +38,7 @@
           <ul id="menu1" class="sections">
 	        
             <li>
-              <div class="notlast">About</div>
+              <div class="notlast"><a href="#">About</a></div>
               <ul id="submenu" class="subsections expandfirst">
                 <li <%= tab_class('Mission') %>><a href="<%= about_path :action => :mission %>">Mission</a></li>
                 <li <%= tab_class('History') %>><a href="<%= about_path :action => :history %>">History</a></li>
@@ -49,7 +49,7 @@
             </li>
             
             <li>
-              <div class="notlast">Team</div>
+              <div class="notlast"><a href="#">Team</a></div>
               <ul id="submenu2" class="subsections">
                 <li <%= tab_class('Members') %>><a href="<%= members_path %>">Members</a></li>
                 <li <%= tab_class('Robots') %>><a href="<%= team_path :action => :robots %>">Robots</a></li>
@@ -58,7 +58,7 @@
             </li>
             
             <li>
-              <div class="notlast">Media</div>
+              <div class="notlast"><a href="#">Media</a></div>
               <ul id="submenu3" class="subsections">
                 <li><a href="http://blog.bhrobotics.com/">Blog</a></li>
                 <li><a href="http://www.google.com/calendar/embed?src=eileenkahn%40gmail.com&ctz=America/Los_Angeles">Calendar</a></li>
@@ -71,7 +71,7 @@
             </li>
             
             <li>
-              <div class="last lastly">Community</div>
+              <div class="last lastly"><a href="#">Community</a></div>
               <ul id="submenu4" class="subsections">
                 <li <%= tab_class('Outreach') %>><a href="<%= community_path :action => :outreach %>">Outreach</a></li>
                 <li <%= tab_class('Funding') %>><a href="<%= community_path :action => :funding %>">Funding</a></li>
