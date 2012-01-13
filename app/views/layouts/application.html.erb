@@ -1,14 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>BHRobotics</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <%= csrf_meta_tags %>
 
-<%= yield %>
+    <title><%= render_title %></title>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
+  </head>
 
-</body>
+  <body>
+    <header id="header">
+      <%= link_to "Home", root_path, :id => "logo" %>
+
+      <nav id="nav">
+        <ol>
+          <li>About</li>
+          <li>Media</li>
+          <li>Partners</li>
+          <li>Community</li>
+          <li><em>FIRST</em></li>
+        </ol>
+      </nav>
+
+      <div id="scroller">
+      </div>
+    </header>
+
+    <div id="main" role="main">
+      <%= yield %>
+    </div>
+
+    <footer id="footer">
+
+    </footer>
+
+    <%= render :partial => "layouts/google_analytics" %>
+  </body>
 </html>
