@@ -1,0 +1,15 @@
+html {
+  background: url("background.png");
+}
+
+body {
+  @extend .medium-type;
+  width: 800px;
+  margin: 0 auto;
+}
+
+#container {
+  @include box-shadow(0 3px 5px black);
+  @include border-radius(5px);
+  margin: line-height(1) 0;
+}

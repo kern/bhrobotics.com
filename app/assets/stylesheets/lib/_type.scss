@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("montserrat-webfont.eot");
+  src: url("montserrat-webfont.eot?#iefix") format("embedded-opentype"), url("montserrat-webfont.woff") format("woff"), url("montserrat-webfont.ttf") format("truetype"), url("montserrat-webfont.svg#MontserratRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.super-type {
+}
+
+.large-type {
+}
+
+.medium-type {
+  @include font-size(12px);
+  @extend .sans-serif-type;
+  color: $dark-gray;
+  font-weight: normal;
+}
+
+.small-type {
+}
+
+.kids-type {
+}
+
+.section-type {
+  @include font-size(18px);
+  @extend .sans-serif-type;
+  color: $white;
+  font-weight: normal;
+}
+
+.nav-type {
+  @include font-size(12px);
+  @extend .sans-serif-type;
+  color: $white;
+  font-weight: normal;
+
+  a {
+    color: $white;
+  }
+}
+
+.footer-type {
+  @include font-size(12px);
+  @extend .sans-serif-type;
+  color: $white;
+  font-weight: normal;
+
+  a {
+    color: $white;
+  }
+}

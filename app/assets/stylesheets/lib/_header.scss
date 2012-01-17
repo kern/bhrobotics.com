@@ -1,0 +1,117 @@
+#header {
+  @include border-radius(5px 5px 0 0);
+  width: 800px;
+  height: 220px;
+  background: url("logo.gif") no-repeat top left;
+}
+
+#logo {
+  @extend .hide-text;
+  display: block;
+  height: 170px;
+}
+
+#nav {
+  @extend .nav-type;
+
+  & > ol {
+    overflow-x: hidden;
+    width: 800px;
+  }
+
+  .section {
+    float: left;
+    background: url("tabs.png") repeat-x 0 0;
+
+    &:last-child {
+      background-position: 160px 0;
+    }
+
+    &:hover {
+      background-position: 0 -70px;
+
+      &:last-child {
+        background-position: 160px -70px;
+      }
+
+      .subsections {
+        display: block;
+      }
+    }
+
+    & > a {
+      display: block;
+      width: 160px;
+      height: 30px;
+      line-height: 30px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    &.first .subsections {
+      margin-left: 0;
+
+      li {
+        border-left: 0;
+      }
+
+      li:last-child {
+        @include border-radius(0 0 5px 0);
+      }
+    }
+
+    &.last .subsections {
+      a {
+        width: 150px;
+      }
+
+      li {
+        border-right: 0;
+      }
+
+      li:last-child {
+        @include border-radius(0 0 0 5px);
+      }
+    }
+
+    .subsections {
+      position: absolute;
+      display: none;
+      margin-left: -1px;
+
+      li:last-child {
+        @include border-radius(0 0 5px 5px);
+      }
+
+      li {
+        background: $light-gray;
+        border: 1px solid $black;
+        border-top: 0;
+
+        &:hover {
+          background: $dark-gray;
+        }
+      }
+
+      a {
+        display: block;
+        width: 149px;
+        padding: 0 5px;
+      }
+    }
+  }
+
+  em {
+    font-style: italic;
+    border-bottom: 1px dotted $white;
+  }
+}
+
+#scroller {
+  @extend .nav-type;
+  height: line-height(1) - 1px;
+  line-height: line-height(1) - 1px;
+  border-bottom: 1px solid $black;
+  padding: 0 5px;
+  background: $dark-gray;
+}

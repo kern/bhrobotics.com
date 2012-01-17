@@ -1,0 +1,17 @@
+#main {
+  @include border-radius(0 0 5px 5px);
+  @extend .page-container;
+  background: $white;
+
+  & > .content {
+    display: table-cell;
+    width: 550px;
+  }
+
+  & > .sidebar {
+    @include border-radius(0 0 5px 0);
+    display: table-cell;
+    width: 250px;
+    background: url("sidebar-background.png") repeat-y left top;
+  }
+}

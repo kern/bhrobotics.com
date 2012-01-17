@@ -1,0 +1,16 @@
+@function line-height($n) {
+  @return $base-line-height * $n;
+}
+
+@mixin font-size($font-size) {
+  font-size: $font-size;
+  line-height: line-height(ceil($font-size / $base-line-height));
+}
+
+.sans-serif-type {
+  font-family: $sans-serif-font;
+}
+
+.serif-type {
+  font-family: $serif-font;
+}

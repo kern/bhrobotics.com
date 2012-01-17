@@ -11,29 +11,88 @@
   </head>
 
   <body>
-    <header id="header">
-      <%= link_to "Home", root_path, :id => "logo" %>
+    <div id="container">
+      <header id="header">
+        <%= link_to "Home", root_path, :id => "logo" %>
 
-      <nav id="nav">
-        <ol>
-          <li>About</li>
-          <li>Media</li>
-          <li>Partners</li>
-          <li>Community</li>
-          <li><em>FIRST</em></li>
-        </ol>
-      </nav>
+        <nav id="nav">
+          <ol>
+            <li class="first section">
+              <%= link_to "About", root_path %>
+              <ol class="subsections">
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+              </ol>
+            </li>
+            <li class="section">
+              <%= link_to "Media", root_path %>
+              <ol class="subsections">
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+              </ol>
+            </li>
+            <li class="section">
+              <%= link_to "Partners", root_path %>
+              <ol class="subsections">
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+              </ol>
+            </li>
+            <li class="section">
+              <%= link_to "Community", root_path %>
+              <ol class="subsections">
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+              </ol>
+            </li>
+            <li class="last section">
+              <%= link_to "<em>FIRST</em>".html_safe, root_path %>
+              <ol class="subsections">
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+                <li><%= link_to "test", root_path %></li>
+              </ol>
+            </li>
+          </ol>
+        </nav>
 
-      <div id="scroller">
+        <div id="scroller">
+          Lorem ipsum dolor sit amet.
+        </div>
+      </header>
+
+      <div id="main" role="main">
+        <%= yield %>
       </div>
-    </header>
-
-    <div id="main" role="main">
-      <%= yield %>
     </div>
 
     <footer id="footer">
-
+      <div id="awards">
+        <img src="/assets/website-awards/2005-excellence.gif" alt="2005 Web Site Excellence Award" />
+        <img src="/assets/website-awards/2007-excellence.gif" alt="2007 Web Site Excellence Award" />
+        <img src="/assets/website-awards/2007-los-angeles.gif" alt="2007 Best Web Site - Los Angeles Regional" />
+        <img src="/assets/website-awards/2008-excellence.gif" alt="2008 Web Site Excellence Award" />
+        <img src="/assets/website-awards/2008-arizona.gif" alt="2008 Best Web Site - Arizona Regional" />
+        <img src="/assets/website-awards/2008-los-angeles.gif" alt="2008 Best Web Site - Los Angeles Regional" />
+        <img src="/assets/website-awards/2009-excellence.jpg" alt="2009 Web Site Excellence Award" />
+      </div>
+      <p id="copyright">&copy; Copyright 2005-2012 BHRobotics. All rights reserved.</p>
+      <p class="misc"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fbhrobotics.com%2F">&#10003; Valid HTML5</a> &middot; <a href="https://github.com/CapnKernul/bhrobotics.com">Entirely open source</a> &middot; Made with &hearts; &middot; <a href="http://usfirst.org"><img src="/assets/first-logo-small.png" alt="FIRST Logo" /></a></p>
+      </ol>
     </footer>
 
     <%= render :partial => "layouts/google_analytics" %>

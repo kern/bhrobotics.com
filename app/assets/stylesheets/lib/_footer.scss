@@ -1,0 +1,40 @@
+#footer {
+  @extend .footer-type;
+  @extend .clearfix;
+  width: 800px;
+  margin: line-height(1) 0 line-height(0.75);
+
+  .misc {
+    float: right;
+    line-height: line-height(1.5);
+    margin-top: line-height(0.5);
+    border-left: 1px dotted $white;
+    padding-left: 10px;
+
+    img {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+  }
+}
+
+#copyright {
+  float: left;
+  line-height: line-height(1.5);
+  margin-top: line-height(0.5);
+}
+
+#awards {
+  @extend .clearfix;
+  margin: 0 auto;
+
+  img {
+    @include box-shadow(0 1px 2px $black);
+    display: block;
+    float: left;
+  }
+
+  img + img {
+    margin-left: 5px;
+  }
+}

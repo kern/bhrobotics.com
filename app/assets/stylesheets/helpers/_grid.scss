@@ -1,6 +1,6 @@
 .page-container {
   @extend .clearfix;
-  width: ($gw-columns * $gw-column) + (($gw-columns + 1) * $gw-gutter);
+  width: $gw-columns * ($gw-column + $gw-gutter);
 }
 
 @mixin grid($n) {

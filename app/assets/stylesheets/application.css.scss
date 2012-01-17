@@ -3,6 +3,12 @@
 
 @import "helpers/reset";
 @import "helpers/grid";
+@import "helpers/hiding";
+@import "helpers/type";
+@import "helpers/clearfix";
 
-@import "app/document";
-@import "app/header";
+@import "lib/type";
+@import "lib/document";
+@import "lib/header";
+@import "lib/main";
+@import "lib/footer";
