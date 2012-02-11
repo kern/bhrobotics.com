@@ -1,37 +1,101 @@
 #header {
-  @include border-radius(5px 5px 0 0);
+  position: relative;
   width: 800px;
   height: 220px;
-  background: url("logo.gif") no-repeat top left;
+  margin: 0 auto;
+  padding: 0 30px;
+  background: url("header-background.png") no-repeat center top;
 }
 
 #logo {
   @extend .hide-text;
   display: block;
-  height: 170px;
+  height: 148px;
+}
+
+#social-media-links {
+  @extend .header-fold-type;
+  @include border-radius(0 0 5px 5px);
+  position: absolute;
+  top: 0;
+  left: 30px;
+  padding: line-height(0.25) 10px;
+  background: $transparent-white;
+
+  .twitter, .facebook {
+    @extend .hide-text;
+    display: inline-block;
+    vertical-align: text-bottom;
+    width: 16px;
+    height: 16px;
+  }
+
+  .twitter {
+    background: url("twitter.png") no-repeat center center;
+  }
+
+  .facebook {
+    background: url("facebook.png") no-repeat center center;
+  }
+}
+
+#first-link {
+  @extend .header-fold-type;
+
+  a {
+    @include border-radius(0 0 5px 5px);
+    position: absolute;
+    top: 0;
+    right: 30px;
+    display: block;
+    padding: line-height(0.25) 10px;
+    background: $transparent-white;
+  }
+
+  img {
+    vertical-align: text-bottom;
+  }
+
+  em {
+    font-style: italic;
+  }
 }
 
 #nav {
-  @extend .nav-type;
-
   & > ol {
-    overflow-x: hidden;
+    @extend .clearfix;
     width: 800px;
   }
 
   .section {
     float: left;
-    background: url("tabs.png") repeat-x 0 0;
+    padding-top: 6px;
+    cursor: pointer;
 
-    &:last-child {
-      background-position: 160px 0;
+    & > a {
+      @extend .nav-section-type;
+      display: block;
+      width: 160px;
+      height: 43px;
+      line-height: 43px !important;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    em {
+      font-style: italic;
+      border-bottom: 1px dotted $white;
     }
 
     &:hover {
-      background-position: 0 -70px;
+      background: url("ribbon-top.png") no-repeat top center;
 
-      &:last-child {
-        background-position: 160px -70px;
+      & > a {
+        @extend .nav-section-hover-type;
+      }
+
+      em {
+        border-bottom: 1px dotted $black;
       }
 
       .subsections {
@@ -39,79 +103,25 @@
       }
     }
 
-    & > a {
-      display: block;
-      width: 160px;
-      height: 30px;
-      line-height: 30px;
-      text-decoration: none;
-      text-align: center;
-    }
-
-    &.first .subsections {
-      margin-left: 0;
-
-      li {
-        border-left: 0;
-      }
-
-      li:last-child {
-        @include border-radius(0 0 5px 0);
-      }
-    }
-
-    &.last .subsections {
-      a {
-        width: 150px;
-      }
-
-      li {
-        border-right: 0;
-      }
-
-      li:last-child {
-        @include border-radius(0 0 0 5px);
-      }
-    }
-
     .subsections {
       position: absolute;
       display: none;
-      margin-left: -1px;
-
-      li:last-child {
-        @include border-radius(0 0 5px 5px);
-      }
-
-      li {
-        background: $light-gray;
-        border: 1px solid $black;
-        border-top: 0;
-
-        &:hover {
-          background: $dark-gray;
-        }
-      }
+      width: 160px;
+      min-height: 140px;
+      padding-bottom: line-height(1);
+      background: url("ribbon-bottom.png") no-repeat center bottom;
 
       a {
+        @extend .nav-subsection-type;
         display: block;
-        width: 149px;
-        padding: 0 5px;
+        width: 100px;
+        padding: 5px 20px 5px 40px;
+        background: url("rivet-hole.png") no-repeat 20px 7px;
+
+        &:hover, &:focus {
+          background-image: url("rivet.png");
+        }
       }
     }
   }
-
-  em {
-    font-style: italic;
-    border-bottom: 1px dotted $white;
-  }
-}
-
-#scroller {
-  @extend .nav-type;
-  height: line-height(1) - 1px;
-  line-height: line-height(1) - 1px;
-  border-bottom: 1px solid $black;
-  padding: 0 5px;
-  background: $dark-gray;
 }

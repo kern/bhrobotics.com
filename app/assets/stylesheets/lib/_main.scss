@@ -1,17 +1,27 @@
 #main {
-  @include border-radius(0 0 5px 5px);
+  @include border-radius(5px);
+  @include box-shadow(0 1px 2px $black);
   @extend .page-container;
+  margin: 0 auto;
   background: $white;
 
   & > .content {
     display: table-cell;
-    width: 550px;
+    width: 640px;
   }
 
   & > .sidebar {
-    @include border-radius(0 0 5px 0);
+    @include border-radius(0 5px 5px 0);
     display: table-cell;
-    width: 250px;
+    width: 320px;
     background: url("sidebar-background.png") repeat-y left top;
+  }
+
+  & > .banner {
+    @extend .banner-type;
+    @include border-radius(5px 5px 0 0);
+    min-height: line-height(15);
+    margin-bottom: line-height(1);
+    background: $black url("banner-background.png") no-repeat center bottom;
   }
 }

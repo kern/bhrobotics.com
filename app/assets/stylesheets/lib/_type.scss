@@ -17,6 +17,10 @@
   @extend .sans-serif-type;
   color: $dark-gray;
   font-weight: normal;
+
+  a {
+    color: $dark-gray;
+  }
 }
 
 .small-type {
@@ -25,14 +29,59 @@
 .kids-type {
 }
 
-.section-type {
-  @include font-size(18px);
+.header-fold-type {
+  @include font-size(12px);
+  @extend .sans-serif-type;
+  color: $dark-gray;
+  font-weight: normal;
+
+  a {
+    color: $dark-gray;
+    text-decoration: none;
+  }
+
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+}
+
+.nav-section-type {
+  @include font-size(16px);
   @extend .sans-serif-type;
   color: $white;
   font-weight: normal;
+  text-shadow: 0 1px 0 $black;
+
+  a {
+    color: $white;
+  }
 }
 
-.nav-type {
+.nav-section-hover-type {
+  @include font-size(16px);
+  @extend .sans-serif-type;
+  color: $black;
+  font-weight: normal;
+  text-shadow: 0 1px 0 $white;
+
+  a {
+    color: $black;
+  }
+}
+
+.nav-subsection-type {
+  @include font-size(12px);
+  @extend .sans-serif-type;
+  color: $black;
+  font-weight: normal;
+  text-decoration: none;
+
+  a {
+    color: $black;
+  }
+}
+
+.footer-type {
   @include font-size(12px);
   @extend .sans-serif-type;
   color: $white;
@@ -43,7 +92,7 @@
   }
 }
 
-.footer-type {
+.banner-type {
   @include font-size(12px);
   @extend .sans-serif-type;
   color: $white;
