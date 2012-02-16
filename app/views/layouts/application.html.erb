@@ -16,9 +16,9 @@
     <header id="header">
       <%= link_to "Home", root_path, :id => "logo" %>
       <div id="social-media-links">
-        <%= link_to "Twitter", "http://twitter.com/bhrobotics1515", :class => "twitter" %>
-        &middot;
         <%= link_to "Facebook", "http://www.facebook.com/pages/BHHS-Robotics/170502726325973", :class => "facebook" %>
+        &middot;
+        <%= link_to "Twitter", "http://twitter.com/bhrobotics1515", :class => "twitter" %>
         &middot;
         <%= link_to "Blog", "http://blog.bhrobotics.com" %>
         &middot;
@@ -32,45 +32,45 @@
       <nav id="nav">
         <ol>
           <li class="section">
-            <%= link_to "About", about_path %>
+            <%= link_to "About", mission_path %>
             <ol class="subsections">
               <li><%= link_to "Mission", mission_path %></li>
-              <li><%= link_to "Members", members_path %></li>
-              <li><%= link_to "Subteams", subteams_path %></li>
               <li><%= link_to "Robots", robots_path %></li>
               <li><%= link_to "Awards", awards_path %></li>
               <li><%= link_to "About this Website", about_this_website_path %></li>
             </ol>
           </li>
           <li class="section">
-            <%= link_to "Media", media_path %>
+            <%= link_to "Media", documents_path %>
             <ol class="subsections">
-              <li><%= link_to "Photos", photos_path %></li>
-              <li><%= link_to "Videos", videos_path %></li>
               <li><%= link_to "Documents", documents_path %></li>
+              <li><%= link_to "Photos", "https://picasaweb.google.com/113247014624505710959" %></li>
+              <li><%= link_to "Videos", "http://vimeo.com/mortorq/videos" %></li>
               <li><%= link_to "Calendar", calendar_path %></li>
             </ol>
           </li>
           <li class="section">
-            <%= link_to "Partners", partners_path %>
+            <%= link_to "Partners", wdi_path %>
             <ol class="subsections">
               <li><%= link_to "Walt Disney Imagineering", wdi_path %></li>
               <li><%= link_to "LA County ROP", larop_path %></li>
               <li><%= link_to "Raytheon", raytheon_path %></li>
               <li><%= link_to "Redman", redman_path %></li>
+              <li><%= link_to "Wire Tech EDM", wire_edm_path %></li>
+              <li><%= link_to "ASB", asb_path %></li>
             </ol>
           </li>
           <li class="section">
-            <%= link_to "Community", community_path %>
+            <%= link_to "Community", outreach_path %>
             <ol class="subsections">
               <li><%= link_to "Outreach", outreach_path %></li>
-              <li><%= link_to "Blog", blog_path %></li>
-              <li><%= link_to "Facebook", facebook_path %></li>
-              <li><%= link_to "Twitter", twitter_path %></li>
+              <li><%= link_to "Blog", "http://blog.bhrobotics.com" %></li>
+              <li><%= link_to "Facebook", "http://www.facebook.com/pages/BHHS-Robotics/170502726325973" %></li>
+              <li><%= link_to "Twitter", "http://twitter.com/bhrobotics1515" %></li>
             </ol>
           </li>
           <li class="section">
-            <%= link_to "<em>FIRST</em>".html_safe, first_path %>
+            <%= link_to "<em>FIRST</em>".html_safe, what_is_first_path %>
             <ol class="subsections">
               <li><%= link_to "What is FIRST?", what_is_first_path %></li>
               <li><%= link_to "Rebound Rumble", rebound_rumble_path %></li>

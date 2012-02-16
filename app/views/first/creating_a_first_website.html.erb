@@ -1,39 +1,32 @@
 <% title "Creating a FIRST Website" %>
-  <h2>Overview</h2> 
-<p>Building a website for an FRC team requires coding and design knowledge but is a fun and rewarding experience, specifically the Website Award! <br /> You will need: <br />
-<ul>
-<li>Basic computer skills</li>
-<li>A computer with an Internet connection, which you have if you're here</li>
-<li>A plaintext editor, we recommend <a href="http://notepad-plus-plus.org/">Notepad++</a> for Windows, <a href="http://www.barebones.com/products/TextWrangler/">TextWrangler</a> for Mac, and  <a href="http://www.vim.org/">Vim</a> for Linux</li>
-</ul></p>  
-  <h2>Getting Started</h2> 
-<p>A basic website is made of HTML and CSS. HTML stands for HyperText Markup Language; it is a language to implement text and images to show in a web browser. CSS stands for Cascading Style Sheets; this language works to stylize different parts of a webpage to look a particular way. Sounds abstract? Don't worry. Just do the tutorial here at <a href="http://htmldog.com">HTMLDog.com</a> in the order on the sidebar, and it will be clear. It will teach you the basics of building a website.</p>
-<%= image_tag 'http://www.lobsangrampa.org/images/html.png', :alt => 'HTML Logo' %>
-  <h2>Designing the Site</h2> 
-<p>The first thing you need to do to build an original website is to envision it. Using Photoshop or another similar application and design a mockup of the site you want. Think about what your site tries to accomplish. You may need to design this in software like Photoshop. You will need to turn this design into a website using HTML and CSS.</p>
-<%= image_tag 'Light_UI.png', :alt => 'Generic Site Mockup' %>
-<p>A generic site mockup with UI elements</p>
-  <h2>Time to Program!</h2>  
-<p>HTML and CSS are only for the front end of the website, that is, what the user will see. But back end editing is needed as well. The back end is what the server will see and all the pre-processing that goes on there. This allows dynamic content to be posted and changed on a webpage without coding. This is called a web application, an interactive website that allows editing of content. These are the sites you are familiar with: Facebook, Twitter, Google, etc. Other programming languages are needed to make this happen. Probably the most ubiquitous one used is PHP. Our website is built on <a href="http://rubyonrails.org">Ruby on Rails</a>, which allows much more creativity and simplicity than PHP. Other sites use Python, which is nice as well. You will use the language you choose to write a model-view-controller that will automate the process of adding members and won't require code after the initial setup. You should learn Rails <a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book">here</a>. Another programming language you will use is JavaScript, which starts running after the web page is loaded and does things like animations and mouse overs. You should read about that <a href="https://developer.mozilla.org/en/JavaScript/Guide">here</a> and also use the <a href="http://jquery.com">jQuery library</a> to make JavaScript very easy to use. You will only need to use Javascript on a FIRST site for animations. If you built your site not needing this, this shouldn't be a priority. It is very useful information for later on, however.</p>
-<%= image_tag 'http://media.smashingmagazine.com/images/introduction-to-rails/rails.jpg', :alt => 'Rails' %>
+<article>
+  <h1>Creating a FIRST Website</h1>
+  <p>Building a website for an FRC team requires coding and design knowledge but is a fun and rewarding experience, specifically the Website Award! You will need:
+  <ul>
+    <li>Basic computer skills</li>
+    <li>A computer with an Internet connection, which you have if you're here</li>
+    <li>A plaintext editor, we recommend <a href="http://notepad-plus-plus.org/">Notepad++</a> for Windows, <a href="http://www.barebones.com/products/TextWrangler/">TextWrangler</a> for Mac, and  <a href="http://www.vim.org/">Vim</a> for Linux</li>
+  </ul>
 
-<p>Several of the points awarded are for the <a href="http://validator.w3.org/">W3C Validator</a>, which is a web app that checks for intakes in the website code. Be sure to run this and post the image it gives you somewhere on the front page, preferably the bottom. Do the same thing with the <a href="http://www.cynthiasays.com/">Cynthia Says Report</a>, which checks for handicap accessibility.</p>
-<%= image_tag 'http://cdn.macgasm.net/wp-content/uploads/2011/01/512px-W3C_logo.svg_.png', :alt => 'World Wide Web Consortium Logo' %>
+  <h2>Getting Started</h2>
+  <p>A basic website is made of HTML and CSS. HTML stands for HyperText Markup Language; it is a language to implement text and images to show in a web browser. CSS stands for Cascading Style Sheets; this language works to stylize different parts of a webpage to look a particular way. Sounds abstract? Don't worry. Just do the tutorial here at <a href="http://htmldog.com">HTMLDog.com</a> in the order on the sidebar, and it will be clear. It will teach you the basics of building a website.</p>
+
+  <h2>Designing the Site</h2>
+  <p>The first thing you need to do to build an original website is to envision it. Using Photoshop or another similar application and design a mockup of the site you want. Think about what your site tries to accomplish. You may need to design this in software like Photoshop. You will need to turn this design into a website using HTML and CSS.</p>
+
+  <h2>Time to Program!</h2>
+  <p>HTML and CSS are only for the front end of the website, that is, what the user will see. But back end editing is needed as well. The back end is what the server will see and all the pre-processing that goes on there. This allows dynamic content to be posted and changed on a webpage without coding. This is called a web application, an interactive website that allows editing of content. These are the sites you are familiar with: Facebook, Twitter, Google, etc. Other programming languages are needed to make this happen. Probably the most ubiquitous one used is PHP. Our website is built on <a href="http://rubyonrails.org">Ruby on Rails</a>, which allows much more creativity and simplicity than PHP. Other sites use Python, which is nice as well. You will use the language you choose to write a model-view-controller that will automate the process of adding members and won't require code after the initial setup. You should learn Rails <a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book">here</a>. Another programming language you will use is JavaScript, which starts running after the web page is loaded and does things like animations and mouse overs. You should read about that <a href="https://developer.mozilla.org/en/JavaScript/Guide">here</a> and also use the <a href="http://jquery.com">jQuery library</a> to make JavaScript very easy to use. You will only need to use Javascript on a FIRST site for animations. If you built your site not needing this, this shouldn't be a priority. It is very useful information for later on, however.</p>
+  <p>Several of the points awarded are for the <a href="http://validator.w3.org/">W3C Validator</a>, which is a web app that checks for intakes in the website code. Be sure to run this and post the image it gives you somewhere on the front page, preferably the bottom. Do the same thing with the <a href="http://www.cynthiasays.com/">Cynthia Says Report</a>, which checks for handicap accessibility.</p>
 
   <h2>Writing Content</h2>
-<p>The most important part of the website is the written content; FIRST emphasizes this in the requirements for the Website Award. On the front page, you should explain what your team is, where it's based, and information about FIRST (more on that later). In their own separate sections, go into detail about your team. Talk about your team's history, mission, and robots (specific details are a plus). You will more importantly have to post the team members (past and present), and mentors. But you will have to write this using PHP/Rails/Python as mentioned above. Once the code is written, add the members individually using the web interface you have built.</p>
-<%= image_tag 'penpaper.png', :alt => 'Pen and paper' %>
+  <p>The most important part of the website is the written content; FIRST emphasizes this in the requirements for the Website Award. On the front page, you should explain what your team is, where it's based, and information about FIRST (more on that later). In their own separate sections, go into detail about your team. Talk about your team's history, mission, and robots (specific details are a plus). You will more importantly have to post the team members (past and present), and mentors. But you will have to write this using PHP/Rails/Python as mentioned above. Once the code is written, add the members individually using the web interface you have built.</p>
 
-  <h2>Integrate Multimedia</h2> 
-<p>A website isn't complete without photos and videos. Open up a browser tab of your team's photo gallery. Don't have one? Compile all of your team's photos in one location and upload them to a gallery site. We recommend Picasa. Using <a href="http://support.google.com/picasa/bin/answer.py?hl=en&answer=66969">this tutorial</a>, embed them in your website. You should also compile all of your team's videos on a YouTube or Vimeo account and embed them on the site as described later in "Spreading the Message."</p> 
-<%= image_tag 'Zorki.png', :alt => 'Camera' %>
+  <h2>Integrate Multimedia</h2>
+  <p>A website isn't complete without photos and videos. Open up a browser tab of your team's photo gallery. Don't have one? Compile all of your team's photos in one location and upload them to a gallery site. We recommend Picasa. Using <a href="http://support.google.com/picasa/bin/answer.py?hl=en&answer=66969">this tutorial</a>, embed them in your website. You should also compile all of your team's videos on a YouTube or Vimeo account and embed them on the site as described later in "Spreading the Message."</p>
 
-  <h2>Spreading the Message</h2> 
-<p>One of the most important requirements for the Website Award is spreading the message of FIRST. Make sure your site has a link to the FIRST website and the FIRST logo. Your website will need a section describing FIRST. You should explain FIRST and its purpose concisely on the home page and in greater depth in its separate section. Describe the year's game as well. It is practical for the reader if you embed a video of the game description from YouTube. This is easily achieved by hitting "Embed" on the video's YouTube page.</p>
-<%= image_tag 'Embed.png', :alt => 'Embed page' %>
-<p>Embed menu on YouTube</p>
-
+  <h2>Spreading the Message</h2>
+  <p>One of the most important requirements for the Website Award is spreading the message of FIRST. Make sure your site has a link to the FIRST website and the FIRST logo. Your website will need a section describing FIRST. You should explain FIRST and its purpose concisely on the home page and in greater depth in its separate section. Describe the year's game as well. It is practical for the reader if you embed a video of the game description from YouTube. This is easily achieved by hitting "Embed" on the video's YouTube page.</p>
 
   <h2>Need Help?</h2><p>
 Contact us at <a href="mailto:contact@bhrobotics.com">contact@bhrobotics.com</a>, we'd be happy to help. If you need to look at the source of this website, just go to <a href="http://github.com/CapnKernul/bhrobotics.com">our git</a>, and you can see the Ruby, HTML, CSS, and Javascript code.</p>
-<%= image_tag 'http://gems.github.com/octocat.png', :alt => 'Github Logo' %>
+</article>

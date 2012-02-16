@@ -7,9 +7,25 @@
 }
 
 .super-type {
+  @include font-size(24px);
+  @extend .sans-serif-type;
+  color: $dark-gray;
+  font-weight: normal;
+
+  a {
+    color: $dark-gray;
+  }
 }
 
 .large-type {
+  @include font-size(18px);
+  @extend .sans-serif-type;
+  color: $dark-gray;
+  font-weight: normal;
+
+  a {
+    color: $dark-gray;
+  }
 }
 
 .medium-type {

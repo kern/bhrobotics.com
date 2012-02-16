@@ -1,0 +1,7 @@
+#calendar {
+  @include grid(12, 2);
+  display: block;
+  height: line-height(36);
+  margin-top: line-height(1);
+  margin-bottom: line-height(1);
+}

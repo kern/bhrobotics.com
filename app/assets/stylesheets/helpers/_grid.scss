@@ -1,35 +1,21 @@
-.page-container {
-  @extend .clearfix;
-  width: $gw-columns * ($gw-column + $gw-gutter);
+@mixin container {
+  @include grid($gw-columns, 0);
 }
 
-@mixin grid($n) {
-  float: left;
-  margin-left: $gw-gutter / 2;
-  margin-right: $gw-gutter / 2;
-  width: grid-width($n);
+@function gutter($n) {
+  @return $gw-gutter * $n;
 }
 
-@mixin prefix($n) {
-  margin-left: grid-width($n) + ($gw-gutter / 2);
+@mixin gutter($n) {
+  margin-left: gutter($n) / 2;
+  margin-right: gutter($n) / 2;
 }
 
-@mixin suffix($n) {
-  margin-right: grid-width($n) + ($gw-gutter / 2);
-}
-
-@for $n from 1 through $gw-columns {
-  .grid-#{$n} {
-    @include grid($n);
-  }
-}
-
-@for $n from 0 through $gw-columns - 1 {
-  .prefix-#{$n} {
-    @include prefix($n);
-  }
-
-  .suffix-#{$n} {
-    @include suffix($n);
+@mixin grid($n, $gutters: 1) {
+  @if $gutters == 0 {
+    width: grid-width($n) + $gw-gutter;
+  } @else {
+    @include gutter($gutters);
+    width: grid-width($n) - gutter($gutters - 1);
   }
 }
