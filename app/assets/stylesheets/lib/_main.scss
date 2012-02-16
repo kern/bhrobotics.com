@@ -23,5 +23,20 @@
     min-height: line-height(15);
     margin-bottom: line-height(1);
     background: $black url("banner-background.png") no-repeat center bottom;
+
+    &.image {
+      text-align: center;
+
+      img {
+        @include border-radius(5px);
+        padding: line-height(1) 20px;
+        margin: line-height(3);
+        background: $white;
+      }
+    }
+  }
+
+  section {
+    @extend .grid-12;
   }
 }
