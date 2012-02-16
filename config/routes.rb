@@ -20,7 +20,6 @@ BHRobotics::Application.routes.draw do
   scope "/partners" do
     get "wdi" => "partners#wdi", :as => :wdi
     get "larop" => "partners#larop", :as => :larop
-    get "bhef" => "partners#bhef", :as => :bhef
     get "raytheon" => "partners#raytheon", :as => :raytheon
     get "redman" => "partners#redman", :as => :redman
     root :to => "partners#index", :as => :partners
