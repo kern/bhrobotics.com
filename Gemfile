@@ -7,6 +7,10 @@ group :development do
   gem "sqlite3"
 end
 
+group :production do
+  gem "pg"
+end
+
 group :assets do
   gem "sass-rails", "~> 3.1.5"
   gem "coffee-rails", "~> 3.1.1"
