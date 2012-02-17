@@ -1,4 +1,6 @@
 BHRobotics::Application.routes.draw do
+  resources :members
+
   scope "/about" do
     get "mission" => "about#mission", :as => :mission
     get "robots" => "about#robots", :as => :robots
