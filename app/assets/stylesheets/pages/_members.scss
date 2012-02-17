@@ -1,0 +1,13 @@
+.members.page {
+  .banner {
+    @include image-banner-format;
+  }
+
+  .members-list {
+    @include half-and-half-format;
+  }
+
+  .information {
+    @include full-format;
+  }
+}

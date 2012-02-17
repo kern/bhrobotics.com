@@ -1,83 +1,74 @@
 class MembersController < ApplicationController
-  # GET /members
-  # GET /members.json
-  def index
-    @members = Member.all
+  before_filter :require_sign_in, :except => [:index, :show, :sign_in, :check_sign_in]
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @members }
-    end
+  def index
+    @students = Member.where(:category => "student").order("name ASC")
+    @mentors = Member.where(:category => "mentor").order("name ASC")
+    @alumni = Member.where(:category => "alumni").order("name ASC")
   end
 
-  # GET /members/1
-  # GET /members/1.json
   def show
     @member = Member.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @member }
-    end
   end
 
-  # GET /members/new
-  # GET /members/new.json
   def new
     @member = Member.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @member }
-    end
   end
 
-  # GET /members/1/edit
   def edit
     @member = Member.find(params[:id])
   end
 
-  # POST /members
-  # POST /members.json
   def create
     @member = Member.new(params[:member])
 
-    respond_to do |format|
-      if @member.save
-        format.html { redirect_to @member, notice: 'Member was successfully created.' }
-        format.json { render json: @member, status: :created, location: @member }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @member.errors, status: :unprocessable_entity }
-      end
+    if @member.save
+      redirect_to @member, notice: 'Member was successfully created.'
+    else
+      render action: "new"
     end
   end
 
-  # PUT /members/1
-  # PUT /members/1.json
   def update
     @member = Member.find(params[:id])
 
-    respond_to do |format|
-      if @member.update_attributes(params[:member])
-        format.html { redirect_to @member, notice: 'Member was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @member.errors, status: :unprocessable_entity }
-      end
+    if @member.update_attributes(params[:member])
+      redirect_to @member, notice: 'Member was successfully updated.'
+    else
+      render action: "edit"
     end
   end
 
-  # DELETE /members/1
-  # DELETE /members/1.json
   def destroy
     @member = Member.find(params[:id])
     @member.destroy
+    redirect_to members_url
+  end
 
-    respond_to do |format|
-      format.html { redirect_to members_url }
-      format.json { head :ok }
+  def require_sign_in
+    redirect_to sign_in_path unless signed_in?
+  end
+
+  helper_method :signed_in?
+  def signed_in?
+    !!session[:signed_in?]
+  end
+
+  def sign_out
+    session[:signed_in?] = false
+    redirect_to members_path
+  end
+
+  def sign_in
+    redirect_to members_path if signed_in?
+  end
+
+  def check_sign_in
+    if MemberPassword.valid?(params[:password])
+      session[:signed_in?] = true
+      redirect_to members_path
+    else
+      render :sign_in
     end
   end
 end

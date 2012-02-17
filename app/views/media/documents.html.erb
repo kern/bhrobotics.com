@@ -1,43 +1,51 @@
 <% title "Documents" %>
-<article>
-  <h1>Documents</h1>
-  <h2>Chairman’s Award</h2>
-  <ul>
-    <li><%= link_to "Chairman's 2005", "/files/chairmans/2005.pdf" %></li>
-    <li><%= link_to "Chairman's 2006", "/files/chairmans/2006.pdf" %></li>
-    <li><%= link_to "Chairman's 2007", "/files/chairmans/2007.pdf" %></li>
-    <li><%= link_to "Chairman's 2008", "/files/chairmans/2008.pdf" %></li>
-    <li><%= link_to "Chairman's 2009", "/files/chairmans/2009.pdf" %></li>
-    <li><%= link_to "Chairman's 2010", "/files/chairmans/2010.pdf" %></li>
-    <li><%= link_to "Chairman's 2011", "/files/chairmans/2011.pdf" %></li>
-  </ul>
+<% page_class "documents" %>
 
-  <h2>Newsletters</h2>
-  <p>Several times a month, the BHHS Robotics Team sends out a student-written newsletter that includes all things FIRST. The articles feature team biographies, alumni, up-to-date news, community outreach activities, and information about the latest electronics on the market. As always, there are pictures to aid the valuable information and calendar of events.</p>
-  <ul>
-    <li><a href="/files/newsletters/Newsletter010707.pdf">MorTorq Newsletter - Volume 1, Issue 1 (January 07, 2007)</a></li>
-    <li><a href="/files/newsletters/Newsletter012007.pdf">MorTorq Newsletter - Volume 1, Issue 2 (January 20, 2007)</a></li>
-    <li><a href="/files/newsletters/Newsletter020107.pdf">MorTorq Newsletter - Volume 1, Issue 3 (February 01, 2007)</a></li>
-    <li><a href="/files/newsletters/Newsletter020907.pdf">MorTorq Newsletter - Volume 1, Issue 4 (February 09, 2007)</a></li>
-    <li><a href="/files/newsletters/Newsletter021507.pdf">MorTorq Newsletter - Volume 1, Issue 5 (February 15, 2007)</a></li>
-    <li><a href="/files/newsletters/Newsletter022307.pdf">MorTorq Newsletter - Volume 1, Issue 6 (February 23, 2007)</a></li>
-    <li><a href="/files/newsletters/Newsletter031107.pdf">MorTorq Newsletter - Volume 1, Issue 7 (March 1, 2007)</a></li>
-    <li><a href="/files/newsletters/Newsletter040407.pdf">MorTorq Newsletter - Volume 1, Issue 8 (April 04, 2007)</a></li>
-    <li><a href="/files/newsletters/Newsletter051307.pdf">MorTorq Newsletter - Volume 1, Issue 9 (May 13, 2007)</a></li>
-    <li><a href="/files/newsletters/Newsletter082607.pdf">MorTorq Newsletter - Volume 1, Issue 10 (August 26, 2007)</a></li>
-    <li><a href="/files/newsletters/Newsletter010808.pdf">MorTorq Newsletter - Volume 1, Issue 11 (January 08, 2008)</a></li>
-    <li><a href="/files/newsletters/Newsletter011608.pdf">MorTorq Newsletter - Volume 1, Issue 12 (January 16, 2008)</a></li>
-    <li><a href="/files/newsletters/Newsletter020908.pdf">MorTorq Newsletter - Volume 1, Issue 13 (February 09, 2008)</a></li>
-    <li><a href="http://assets.bhrobotics.com/newsletters/090930.pdf">MorTorq Newsletter - Volume 3, Issue 1 (September 30, 2009)</a></li>
-    <li><a href="http://assets.bhrobotics.com/newsletters/091112.pdf">MorTorq Newsletter - Volume 3, Issue 2 (November 12, 2009)</a></li>
-    <li><a href="http://assets.bhrobotics.com/newsletters/100111.pdf">MorTorq Newsletter - Volume 3, Issue 3 (January 11, 2010)</a></li>
-    <li><a href="http://assets.bhrobotics.com/newsletters/100122.pdf">MorTorq Newsletter - Volume 3, Issue 4 (January 22, 2010)</a></li>
-    <li><a href="http://assets.bhrobotics.com/newsletters/100222.pdf">MorTorq Newsletter - Volume 3, Issue 5 (February 12, 2010)</a></li>
-    <li><a href="http://assets.bhrobotics.com/newsletters/101108.pdf">MorTorq Newsletter - Volume 4, Issue 1 (November 8, 2010)</a></li>
-    <li><a href="http://assets.bhrobotics.com/newsletters/101207.pdf">MorTorq Newsletter - Volume 4, Issue 2 (December 7, 2010)</a></li>
-    <li><a href="http://assets.bhrobotics.com/newsletters/110117.pdf">MorTorq Newsletter - Volume 4, Issue 3 (January 7, 2011)</a></li>
-    <li><a href="http://assets.bhrobotics.com/newsletters/111101.pdf">MorTorq Newsletter - Volume 5, Issue 1 (October 27, 2011)</a></li>
-  </ul>
+<div class="columns">
+  <div class="column-1">
+    <h1>Documents</h1>
+    <p>Several times a month, the BHHS Robotics Team sends out a student-written newsletter that includes all things FIRST. The articles feature team biographies, alumni, up-to-date news, community outreach activities, and information about the latest electronics on the market. As always, there are pictures to aid the valuable information and calendar of events.</p>
+    <p>To receive this newsletter as an email, just <%= link_to "sign up", "http://visitor.constantcontact.com/email.jsp?m=1101504610701&lang=en" %>!</p>
+    <ul>
+      <li><%= link_to "Volume 1, Issue 2 (January 20, 2007)", "/assets/newsletter070120.pdf" %></li>
+      <li><%= link_to "Volume 1, Issue 3 (February 01, 2007)", "/assets/newsletter070201.pdf" %></li>
+      <li><%= link_to "Volume 1, Issue 4 (February 09, 2007)", "/assets/newsletter070209.pdf" %></li>
+      <li><%= link_to "Volume 1, Issue 5 (February 15, 2007)", "/assets/newsletter070215.pdf" %></li>
+      <li><%= link_to "Volume 1, Issue 6 (February 23, 2007)", "/assets/newsletter070223.pdf" %></li>
+      <li><%= link_to "Volume 1, Issue 7 (March 1, 2007)", "/assets/newsletter070311.pdf" %></li>
+      <li><%= link_to "Volume 1, Issue 8 (April 04, 2007)", "/assets/newsletter070404.pdf" %></li>
+      <li><%= link_to "Volume 1, Issue 9 (May 13, 2007)", "/assets/newsletter070513.pdf" %></li>
+      <li><%= link_to "Volume 1, Issue 10 (August 26, 2007)", "/assets/newsletter070826.pdf" %></li>
+      <li><%= link_to "Volume 1, Issue 12 (January 16, 2008)", "/assets/newsletter080116.pdf" %></li>
+      <li><%= link_to "Volume 1, Issue 13 (February 09, 2008)", "/assets/newsletter080209.pdf" %></li>
+      <li><%= link_to "Volume 3, Issue 1 (September 30, 2009)", "/assets/newsletter090930.pdf" %></li>
+      <li><%= link_to "Volume 3, Issue 2 (November 12, 2009)", "/assets/newsletter091112.pdf" %></li>
+      <li><%= link_to "Volume 3, Issue 3 (January 11, 2010)", "/assets/newsletter100111.pdf" %></li>
+      <li><%= link_to "Volume 3, Issue 4 (January 22, 2010)", "/assets/newsletter100122.pdf" %></li>
+      <li><%= link_to "Volume 3, Issue 5 (February 12, 2010)", "/assets/newsletter100222.pdf" %></li>
+      <li><%= link_to "Volume 4, Issue 1 (November 8, 2010)", "/assets/newsletter101108.pdf" %></li>
+      <li><%= link_to "Volume 4, Issue 2 (December 7, 2010)", "/assets/newsletter101207.pdf" %></li>
+      <li><%= link_to "Volume 4, Issue 3 (January 7, 2011)", "/assets/newsletter110117.pdf" %></li>
+      <li><%= link_to "Volume 5, Issue 1 (October 27, 2011)", "/assets/newsletter111101.pdf" %></li>
+      <li><%= link_to "Volume 5, Issue 2 (December 7, 2011)", "/assets/newsletter111207.pdf" %></li>
+      <li><%= link_to "Volume 5, Issue 3 (January 6, 2012)", "/assets/newsletter120106.pdf" %></li>
+      <li><%= link_to "Volume 5, Issue 5 (January 29, 2012)", "/assets/newsletter120213.pdf" %></li>
+    </ul>
+  </div>
+  <div class="column-2">
+    <h2>Build/Safety Manual</h2>
+    <p>A couple years ago, one of our team members created a <%= link_to "build and safety manual", "/assets/build-manual.pdf" %> that explains all of the different tools and safety procedures when working on the robot. This manual became required reading before season for any member of the build team. Feel free to use it for your own team!</p>
 
-  <p>To receive this newsletter as an email, please <a href="http://visitor.constantcontact.com/email.jsp?m=1101504610701&lang=en" target="_blank">sign up</a>!</p>
-</article>
+    <h2>Style Guide</h2>
+    <p>Our team tries to adhere to a <%= link_to "style guide", "/assets/style-guide.pdf" %> to ensure consistent branding throughout all of our materials. We encourage your team to create one as well!</p>
+
+    <h2>Chairman’s Award</h2>
+    <p>Each year, our team submits a booklet for the Chairman's Award. If you need some inspiration for your own submission, feel free to base it upon ours.</p>
+    <ul>
+      <li><%= link_to "Chairman's 2005", "/assets/chairmans2005.pdf" %></li>
+      <li><%= link_to "Chairman's 2006", "/assets/chairmans2006.pdf" %></li>
+      <li><%= link_to "Chairman's 2007", "/assets/chairmans2007.pdf" %></li>
+      <li><%= link_to "Chairman's 2008", "/assets/chairmans2008.pdf" %></li>
+    </ul>
+  </div>
+</div>

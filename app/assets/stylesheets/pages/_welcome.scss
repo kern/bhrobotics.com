@@ -1,0 +1,9 @@
+.welcome.page {
+  .intro {
+    @include full-format;
+  }
+
+  .information {
+    @include half-and-half-format;
+  }
+}

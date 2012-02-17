@@ -1,39 +1,44 @@
-<h1>Listing members</h1>
+<% title "Members" %>
+<% page_class "members" %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Biography</th>
-    <th>College</th>
-    <th>Graduation year</th>
-    <th>Position</th>
-    <th>Subteam</th>
-    <th>Company</th>
-    <th>Category</th>
-    <th>Picture</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<section class="banner">
+  <%= image_tag "team-picture.jpg", :alt => "Team picture" %>
+</section>
 
-<% @members.each do |member| %>
-  <tr>
-    <td><%= member.name %></td>
-    <td><%= member.biography %></td>
-    <td><%= member.college %></td>
-    <td><%= member.graduation_year %></td>
-    <td><%= member.position %></td>
-    <td><%= member.subteam %></td>
-    <td><%= member.company %></td>
-    <td><%= member.category %></td>
-    <td><%= member.picture %></td>
-    <td><%= link_to 'Show', member %></td>
-    <td><%= link_to 'Edit', edit_member_path(member) %></td>
-    <td><%= link_to 'Destroy', member, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+<section class="members-list">
+  <div class="column-1">
+    <h1>Members</h1>
+    <h2>Students</h2>
+    <ul>
+      <% @students.each do |student| %>
+        <li>
+          <%= link_to student.name, member_path(student) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="column-2">
+    <h2>Mentors</h2>
+    <ul>
+      <% @mentors.each do |mentor| %>
+        <li>
+          <%= link_to mentor.name, member_path(mentor) %>
+        </li>
+      <% end %>
+    </ul>
+
+    <h2>Alumni</h2>
+    <ul>
+      <% @alumni.each do |alumni| %>
+        <li>
+          <%= link_to alumni.name, member_path(alumni) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</section>
+
+<% if signed_in? %>
+  <%= link_to "New Member", new_member_path %>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Member', new_member_path %>

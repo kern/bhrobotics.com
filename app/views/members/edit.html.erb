@@ -3,4 +3,5 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @member %> |
+<%= link_to 'Delete', member_path(@member), :method => :delete %> |
 <%= link_to 'Back', members_path %>

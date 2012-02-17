@@ -1,50 +1,35 @@
-<p id="notice"><%= notice %></p>
+<% title @member.name %>
+<% page_class "members" %>
 
-<p>
-  <b>Name:</b>
-  <%= @member.name %>
-</p>
+<section class="information">
+  <h1><%= @member.name %></h1>
+  <ul>
+    <% if @member.biography.present? %>
+      <li>Biography: <%= @member.biography %></li>
+    <% end %>
 
-<p>
-  <b>Biography:</b>
-  <%= @member.biography %>
-</p>
+    <% if @member.college.present? %>
+      <li>College: <%= @member.college %></li>
+    <% end %>
 
-<p>
-  <b>College:</b>
-  <%= @member.college %>
-</p>
+    <% if @member.graduation_year.present? %>
+      <li>Graduation year: <%= @member.graduation_year %></li>
+    <% end %>
 
-<p>
-  <b>Graduation year:</b>
-  <%= @member.graduation_year %>
-</p>
+    <% if @member.position.present? %>
+      <li>Position: <%= @member.position %></li>
+    <% end %>
 
-<p>
-  <b>Position:</b>
-  <%= @member.position %>
-</p>
+    <% if @member.subteam.present? %>
+      <li>Subteam: <%= @member.subteam %></li>
+    <% end %>
 
-<p>
-  <b>Subteam:</b>
-  <%= @member.subteam %>
-</p>
+    <% if @member.company.present? %>
+      <li>Company: <%= @member.company %></li>
+    <% end %>
+  </ul>
+</section>
 
-<p>
-  <b>Company:</b>
-  <%= @member.company %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%= @member.category %>
-</p>
-
-<p>
-  <b>Picture:</b>
-  <%= @member.picture %>
-</p>
-
-
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+<% if signed_in? %>
+  <%= link_to "Edit", edit_member_path(@member) %>
+<% end %>

@@ -62,6 +62,25 @@
     background: $light-gray;
     text-align: center;
   }
+
+  section {
+    @extend .clearfix;
+  }
+
+  img {
+    margin-top: line-height(1);
+    &.right {
+      float: right;
+      border: 5px solid $light-gray;
+      margin-left: gutter(1);
+    }
+
+    &.left {
+      float: left;
+      border: 5px solid $light-gray;
+      margin-right: gutter(1);
+    }
+  }
 }
 
 hr {
@@ -79,6 +98,7 @@ hr {
   @include default-format;
   .column-1 {
     display: table-cell;
+    width: 480px - gutter(2);
     max-width: 480px - gutter(2);
     padding-right: gutter(1);
     padding-left: gutter(1);
@@ -86,6 +106,7 @@ hr {
 
   .column-2 {
     display: table-cell;
+    width: 480px - gutter(2);
     max-width: 480px - gutter(2);
     padding: 0 gutter(1);
   }
@@ -96,6 +117,7 @@ hr {
   .column-1 {
     display: table-cell;
     vertical-align: top;
+    width: 640px - gutter(2);
     max-width: 640px - gutter(2);
     padding: 0 gutter(1);
   }
@@ -104,6 +126,7 @@ hr {
     @include border-radius(0 5px 5px 0);
     display: table-cell;
     vertical-align: top;
+    width: 320px - gutter(2);
     max-width: 320px - gutter(2);
     padding: 0 gutter(1);
     background: url("sidebar-background.png") repeat-y left top;

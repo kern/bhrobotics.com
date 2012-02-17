@@ -1,8 +1,18 @@
 BHRobotics::Application.routes.draw do
-  resources :members
-
   scope "/about" do
     get "mission" => "about#mission", :as => :mission
+
+    get "members/sign-in" => "members#sign_in", :as => :sign_in
+    post "members/sign-in" => "members#check_sign_in", :as => :check_sign_in
+    get "members/sign-out" => "members#sign_out", :as => :sign_out
+    get "members" => "members#index", :as => :members
+    post "members" => "members#create"
+    get "members/new" => "members#new", :as => :new_member
+    get "members/:id" => "members#show", :as => :member
+    put "members/:id" => "members#update"
+    delete "members/:id" => "members#destroy"
+    get "members/:id/edit" => "members#edit", :as => :edit_member
+
     get "robots" => "about#robots", :as => :robots
     get "awards" => "about#awards", :as => :awards
     get "about_this_website" => "about#about_this_website", :as => :about_this_website

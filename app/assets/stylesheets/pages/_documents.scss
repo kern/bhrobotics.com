@@ -1,0 +1,5 @@
+.documents.page {
+  .columns {
+    @include sidebar-format;
+  }
+}
