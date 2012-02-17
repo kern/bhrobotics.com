@@ -1,0 +1,135 @@
+@mixin default-format {
+  h1 {
+    @extend .super-type;
+    margin: line-height(1) 0;
+
+    &:before {
+      content: "\00BB\00A0";
+    }
+  }
+
+  h2 {
+    @extend .large-type;
+    margin: line-height(1) 0;
+  }
+
+  h3 {
+    margin: line-height(1) 0;
+    border-bottom: 1px dotted $black;
+  }
+
+  p {
+    margin: line-height(1) 0;
+  }
+
+  ul {
+    list-style: disc inside;
+    margin: line-height(1) 0;
+  }
+
+  table {
+    @extend .table-type;
+    border: 5px solid $light-gray;
+    width: 100%;
+    margin: line-height(1) 0;
+    background: url("table-background.png");
+  }
+
+  th, td {
+    text-align: left;
+    padding: line-height(0.5) gutter(1);
+  }
+
+  thead {
+    border-bottom: 1px dotted $white;
+  }
+
+  iframe {
+    display: block;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  figure {
+    margin: line-height(1) 0;
+  }
+
+  figcaption {
+    @include border-radius(0 0 5px 5px);
+    @extend .table-type;
+    padding: line-height(0.5) 0;
+    background: $light-gray;
+    text-align: center;
+  }
+}
+
+hr {
+  margin: line-height(1) 0;
+  border: 0;
+  border-bottom: 1px dotted $black;
+}
+
+@mixin full-format {
+  @include default-format;
+  @include grid(12, 2);
+}
+
+@mixin half-and-half-format {
+  @include default-format;
+  .column-1 {
+    display: table-cell;
+    max-width: 480px - gutter(2);
+    padding-right: gutter(1);
+    padding-left: gutter(1);
+  }
+
+  .column-2 {
+    display: table-cell;
+    max-width: 480px - gutter(2);
+    padding: 0 gutter(1);
+  }
+}
+
+@mixin sidebar-format {
+  @include default-format;
+  .column-1 {
+    display: table-cell;
+    vertical-align: top;
+    max-width: 640px - gutter(2);
+    padding: 0 gutter(1);
+  }
+
+  .column-2 {
+    @include border-radius(0 5px 5px 0);
+    display: table-cell;
+    vertical-align: top;
+    max-width: 320px - gutter(2);
+    padding: 0 gutter(1);
+    background: url("sidebar-background.png") repeat-y left top;
+  }
+}
+
+@mixin banner-format {
+  @include default-format;
+  @include grid(12, 0);
+  @include border-radius(5px 5px 0 0);
+  @extend .banner-type;
+  display: table-cell;
+  vertical-align: middle;
+  min-height: line-height(15);
+  background: $black url("banner-background.png") no-repeat center bottom;
+}
+
+@mixin image-banner-format {
+  @include banner-format;
+  text-align: center;
+
+  img {
+    @include border-radius(5px);
+    display: block;
+    padding: line-height(1) gutter(1);
+    margin: line-height(2) auto;
+    background: $white;
+  }
+}

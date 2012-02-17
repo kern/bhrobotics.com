@@ -1,0 +1,13 @@
+.about-this-website.page {
+  .intro {
+    @include full-format;
+  }
+
+  .website-information {
+    @include half-and-half-format;
+  }
+
+  .acknowledgements {
+    @include full-format;
+  }
+}

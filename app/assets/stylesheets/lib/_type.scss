@@ -118,3 +118,14 @@
     color: $white;
   }
 }
+
+.table-type {
+  @include font-size(18px);
+  @extend .sans-serif-type;
+  color: $white;
+  font-weight: normal;
+
+  a {
+    color: $white;
+  }
+}

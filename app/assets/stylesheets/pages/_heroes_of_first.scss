@@ -1,0 +1,9 @@
+.heroes-of-first.page {
+  .intro {
+    @include full-format;
+  }
+
+  .columns {
+    @include half-and-half-format;
+  }
+}

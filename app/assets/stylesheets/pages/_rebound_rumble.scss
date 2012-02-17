@@ -1,0 +1,19 @@
+.rebound-rumble.page {
+  .columns {
+    @include sidebar-format;
+  }
+
+  .question {
+    list-style-type: none;
+    margin: line-height(1) 0;
+  }
+
+  .animation iframe {
+    width: 280px;
+    height: 188px;
+  }
+
+  em {
+    @extend .large-type;
+  }
+}

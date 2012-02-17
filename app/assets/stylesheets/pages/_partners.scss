@@ -1,0 +1,9 @@
+.partners.page {
+  .banner {
+    @include image-banner-format;
+  }
+
+  .explanation {
+    @include full-format;
+  }
+}
