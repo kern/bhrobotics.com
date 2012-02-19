@@ -62,6 +62,9 @@
 }
 
 #nav {
+  position: relative;
+  z-index: 1000;
+
   & > ol {
     @extend .clearfix;
     width: 800px;

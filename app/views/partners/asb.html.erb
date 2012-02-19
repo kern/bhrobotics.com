@@ -1,11 +1,15 @@
 <% title "ASB" %>
 <% page_class "partners" %>
 
-<section class="banner">
-  <%= link_to image_tag("partners/asb.png", :alt => "ASB"), "http://bhhs.bhusd.org" %>
-</section>
+<section class="carousel">
+  <section class="banner">
+    <%= link_to "Back", wire_edm_path, :class => "back" %>
+    <%= link_to "Forward", wdi_path, :class => "forward" %>
+    <%= link_to image_tag("partners/asb.png", :alt => "ASB"), "http://bhhs.bhusd.org" %>
+  </section>
 
-<section class="explanation">
-  <h1>ASB</h1>
-  <p>ASB (Associated Student Body) is the student body group of the Beverly Hills High School. They have donated $1000 to MorTorq.</p>
+  <section class="information">
+    <h1>ASB</h1>
+    <p>ASB (Associated Student Body) is the student body group of the Beverly Hills High School. They have donated $1000 to MorTorq.</p>
+  </section>
 </section>

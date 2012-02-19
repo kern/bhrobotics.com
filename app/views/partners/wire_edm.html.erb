@@ -1,11 +1,15 @@
 <% title "Wire Tech EDM" %>
 <% page_class "partners" %>
 
-<section class="banner">
-  <%= link_to image_tag("partners/wire-edm.png", :alt => "Wire Teach EDM"), "http://www.wiretechedm.com" %>
-</section>
+<section class="carousel">
+  <section class="banner">
+    <%= link_to "Back", redman_path, :class => "back" %>
+    <%= link_to "Forward", asb_path, :class => "forward" %>
+    <%= link_to image_tag("partners/wire-edm.png", :alt => "Wire Teach EDM"), "http://www.wiretechedm.com" %>
+  </section>
 
-<section class="explanation">
-  <h1>Wire Tech EDM</h1>
-  <p>Wire Tech EDM is a job shop specializing in Wire EDM and EDM hole drilling. They have donated numerous water-jetted parts to the build team.</p>
+  <section class="information">
+    <h1>Wire Tech EDM</h1>
+    <p>Wire Tech EDM is a job shop specializing in Wire EDM and EDM hole drilling. They have donated numerous water-jetted parts to the build team.</p>
+  </section>
 </section>

@@ -13,9 +13,19 @@ BHRobotics::Application.routes.draw do
     delete "members/:id" => "members#destroy"
     get "members/:id/edit" => "members#edit", :as => :edit_member
 
-    get "robots" => "about#robots", :as => :robots
+    scope "/robots" do
+      get "rob-2" => "about#rob_2", :as => :rob_2
+      get "strikert" => "about#strikert", :as => :strikert
+      get "morbit" => "about#morbit", :as => :morbit
+      get "orange-fever" => "about#orange_fever", :as => :orange_fever
+      get "mad-max" => "about#mad_max", :as => :mad_max
+      get "killer-katie" => "about#killer_katie", :as => :killer_katie
+      get "norman-1" => "about#norman_1", :as => :norman_1
+      root :to => "about#rob_2", :as => :robots
+    end
+
     get "awards" => "about#awards", :as => :awards
-    get "about_this_website" => "about#about_this_website", :as => :about_this_website
+    get "about-this-website" => "about#about_this_website", :as => :about_this_website
     root :to => "about#mission"
   end
 
@@ -31,21 +41,39 @@ BHRobotics::Application.routes.draw do
     get "raytheon" => "partners#raytheon", :as => :raytheon
     get "redman" => "partners#redman", :as => :redman
     get "asb" => "partners#asb", :as => :asb
-    get "wire_edm" => "partners#wire_edm", :as => :wire_edm
+    get "wire-edm" => "partners#wire_edm", :as => :wire_edm
     root :to => "partners#wdi"
   end
 
   scope "/community" do
-    get "outreach" => "community#outreach", :as => :outreach
+    scope "/outreach" do
+      get "car-show" => "community#car_show", :as => :car_show
+      get "ttc" => "community#ttc", :as => :ttc
+      get "rmd-charities" => "community#rmd_charities", :as => :rmd_charities
+      get "engineering-day" => "community#engineering_day", :as => :engineering_day
+      get "k8-contest" => "community#k8_contest", :as => :k8_contest
+      get "mda" => "community#mda", :as => :mda
+      get "cedars" => "community#cedars", :as => :cedars
+      get "hm-breakfast" => "community#hm_breakfast", :as => :hm_breakfast
+      get "other-outreach-events" => "community#other_outreach_events", :as => :other_outreach_events
+      root :to => "community#outreach", :as => :outreach
+    end
+
     root :to => "community#outreach"
   end
 
   scope "/first" do
-    get "what_is_first" => "first#what_is_first", :as => :what_is_first
-    get "rebound_rumble" => "first#rebound_rumble", :as => :rebound_rumble
-    get "previous_years" => "first#previous_years", :as => :previous_years
-    get "heroes_of_first" => "first#heroes_of_first", :as => :heroes_of_first
-    get "creating_a_first_website" => "first#creating_a_first_website", :as => :creating_a_first_website
+    get "what-is-first" => "first#what_is_first", :as => :what_is_first
+    get "rebound-rumble" => "first#rebound_rumble", :as => :rebound_rumble
+    get "logomotion" => "first#logomotion", :as => :logomotion
+    get "breakaway" => "first#breakaway", :as => :breakaway
+    get "lunacy" => "first#lunacy", :as => :lunacy
+    get "overdrive" => "first#overdrive", :as => :overdrive
+    get "rack-n-roll" => "first#rack_n_roll", :as => :rack_n_roll
+    get "aim-high" => "first#aim_high", :as => :aim_high
+    get "triple-play" => "first#triple_play", :as => :triple_play
+    get "heroes-of-first" => "first#heroes_of_first", :as => :heroes_of_first
+    get "creating-a-first-website" => "first#creating_a_first_website", :as => :creating_a_first_website
     root :to => "first#what_is_first"
   end
 

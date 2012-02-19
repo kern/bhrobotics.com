@@ -1,5 +1,9 @@
+.hide {
+  display: none;
+}
+
 .hide-block {
-  position: relative;
+  position: absolute;
   left: -999999px;
 }
 

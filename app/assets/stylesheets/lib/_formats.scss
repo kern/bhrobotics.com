@@ -68,16 +68,19 @@
   }
 
   img {
-    margin-top: line-height(1);
     &.right {
       float: right;
       border: 5px solid $light-gray;
+      margin-top: line-height(1);
+      margin-bottom: line-height(1);
       margin-left: gutter(1);
     }
 
     &.left {
       float: left;
       border: 5px solid $light-gray;
+      margin-top: line-height(1);
+      margin-bottom: line-height(1);
       margin-right: gutter(1);
     }
   }
@@ -120,6 +123,13 @@ hr {
     width: 640px - gutter(2);
     max-width: 640px - gutter(2);
     padding: 0 gutter(1);
+
+    .header-image {
+      @include border-radius(5px 0 0 0);
+      display: block;
+      margin-top: line-height(-1);
+      margin-left: gutter(-1);
+    }
   }
 
   .column-2 {
@@ -131,6 +141,11 @@ hr {
     padding: 0 gutter(1);
     background: url("sidebar-background.png") repeat-y left top;
   }
+}
+
+@mixin header-format {
+  @include border-radius(5px 5px 0 0);
+  width: 100%;
 }
 
 @mixin banner-format {

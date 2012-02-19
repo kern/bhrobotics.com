@@ -1,4 +1,8 @@
 .about-this-website.page {
+  header {
+    @include header-format;
+  }
+
   .intro {
     @include full-format;
   }

@@ -1,5 +1,7 @@
 .outreach.page {
-  .events {
-    @include full-format;
+  .screen {
+    .information {
+      @include full-format;
+    }
   }
 }

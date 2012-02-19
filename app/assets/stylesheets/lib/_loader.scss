@@ -1,0 +1,10 @@
+#loader {
+  @include border-radius(5px);
+  @extend .banner-type;
+  display: none;
+  position: absolute;
+  top: line-height(1);
+  right: gutter(1);
+  padding: line-height(0.5) gutter(1);
+  background: $dark-gray;
+}
