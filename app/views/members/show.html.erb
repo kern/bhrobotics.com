@@ -1,6 +1,12 @@
 <% title @member.name %>
 <% page_class "members" %>
 
+<% if @member.picture.present? %>
+  <section class="banner">
+    <%= image_tag @member.picture, :alt => @member.name %>
+  </section>
+<% end %>
+
 <section class="information">
   <h1><%= @member.name %></h1>
   <ul>

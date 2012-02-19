@@ -1,6 +1,6 @@
 .welcome.page {
-  .intro {
-    @include full-format;
+  header {
+    @include header-format;
   }
 
   .information {
