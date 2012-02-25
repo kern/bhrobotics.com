@@ -21,7 +21,8 @@ BHRobotics::Application.routes.draw do
       get "mad-max" => "about#mad_max", :as => :mad_max
       get "killer-katie" => "about#killer_katie", :as => :killer_katie
       get "norman-1" => "about#norman_1", :as => :norman_1
-      root :to => "about#rob_2", :as => :robots
+      get "mettabot" => "about#mettabot", :as => :mettabot
+      root :to => "about#mettabot", :as => :robots
     end
 
     get "awards" => "about#awards", :as => :awards
