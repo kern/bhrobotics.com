@@ -1,4 +1,7 @@
 BHRobotics::Application.routes.draw do
+  get "/welcome" => "welcome#index", :as => :welcome
+  get "/webcast" => "welcome#webcast", :as => :webcast
+
   scope "/about" do
     get "mission" => "about#mission", :as => :mission
 
