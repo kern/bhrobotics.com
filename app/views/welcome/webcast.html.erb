@@ -10,6 +10,7 @@
       body {
         width: 960px;
         margin: 0 auto;
+		font-family: Helvetica, arial;
       }
 
       h1, p {
@@ -22,15 +23,68 @@
       }
 
       iframe {
-        display: block;
         border: 0px none transparent;
         margin: 0 auto;
+		float: left;
       }
+
+	 .others {
+		display: inline;
+	}
+	.first {
+		float: left;
+	}
+	.second {
+		float: right;
+	}
+	
+	}
+
     </style>
   </head>
   <body>
+	<div class="main">
     <h1>BHRobotics's FIRST LA Regional Live Webcast</h1>
     <p>Looking for BHRobotics.com? <%= link_to "Continue on to our site.", welcome_path %></p>
     <iframe width="720" height="431" src="http://www.ustream.tv/embed/10628434" scrolling="no" frameborder="0"></iframe>
+	<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+	<script>
+	new TWTR.Widget({
+	  version: 2,
+	  type: 'search',
+	  search: '\"FIRST LA\" OR \"FIRST LA REGIONAL\" OR \"#OMGROBOTS\" OR \"FRC\" OR \"#ROBOTICS\"',
+	  interval: 30000,
+	  title: '#OMGROBOTS',
+	  subject: 'FIRST LA Regional',
+	  width: 240,
+	  height: 300,
+	  theme: {
+	    shell: {
+	      background: '#ff8324',
+	      color: '#ffffff'
+	    },
+	    tweets: {
+	      background: '#ffffff',
+	      color: '#444444',
+	      links: '#964e16'
+	    }
+	  },
+	  features: {
+	    scrollbar: false,
+	    loop: true,
+	    live: true,
+	    behavior: 'default'
+	  }
+	}).render().start();
+	</script>
+</div>
+<div class="others">
+<div class="first">
+	<object data=http://www2.usfirst.org/2012comp/Events/CA/rankings.html width="480" height="480"> <embed src=http://www2.usfirst.org/2012comp/Events/CA/rankings.html width="480" height="480"> </embed></object>
+</div>
+<div class="second">
+	<object data=http://www2.usfirst.org/2012comp/Events/CA/matchresults.html width="480" height="480"> <embed src=http://www2.usfirst.org/2012comp/Events/CA/matchresults.html width="480" height="480"> </embed></object>
+
+</div>
   </body>
 </html>
