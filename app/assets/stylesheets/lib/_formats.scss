@@ -97,6 +97,18 @@ hr {
   @include grid(12, 2);
 }
 
+@mixin headline-format {
+  @include full-format;
+  @extend .super-type;
+  margin-top: line-height(1);
+  margin-bottom: line-height(1);
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
+
 @mixin half-and-half-format {
   @include default-format;
   .column-1 {

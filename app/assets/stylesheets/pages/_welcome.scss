@@ -3,6 +3,10 @@
     @include header-format;
   }
 
+  .headline {
+    @include headline-format;
+  }
+
   .information {
     @include half-and-half-format;
   }
