@@ -81,5 +81,5 @@ BHRobotics::Application.routes.draw do
     root :to => "first#what_is_first"
   end
 
-  root :to => "welcome#index"
+  root :to => "welcome#webcast"
 end
