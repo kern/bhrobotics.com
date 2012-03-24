@@ -37,6 +37,7 @@ BHRobotics::Application.routes.draw do
     get "documents" => "media#documents", :as => :documents
     get "calendar" => "media#calendar", :as => :calendar
     root :to => "media#documents"
+    get "photos" => "media#photos", :as => :photos
   end
 
   scope "/partners" do

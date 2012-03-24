@@ -6,3 +6,12 @@
   background: $white;
   overflow: auto;
 }
+#picasaGallery {
+  width: 800px;
+}
+.picasaGalleryItem {
+		border: 1px solid silver;
+		margin: 5px;
+		padding: 2px;
+		float: left;
+}
