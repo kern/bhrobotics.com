@@ -1,0 +1,88 @@
+<% title "Photos"%>
+<% page_class "photos"%>
+		<script type="text/javascript">
+		var scriptLoader = {
+			_loadScript: function (url, callback) {
+				var head = document.getElementsByTagName('head')[0];
+				var script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.src = url;
+				if (callback) {
+					script.onreadystatechange = function () {
+						if (this.readyState == 'loaded') callback();
+					}
+					script.onload = callback;
+				}
+				head.appendChild(script);
+			},
+ 
+			load: function (items, iteration) {
+				if (!iteration) iteration = 0;
+				if (items[iteration]) {
+					scriptLoader._loadScript(
+						items[iteration],
+						function () {
+							scriptLoader.load(items, iteration+1);
+						}
+					)
+				}
+			}
+		}
+		</script>
+		
+		<script type="text/javascript">
+		/**
+		*
+		*  Add picasa gallery to your blog or website
+		*  http://www.webtoolkit.info/
+		*
+		**/
+		var picasa = {
+
+			galleries: 0,
+
+			gallery: function (galleryObjectId, galleryObjectName, settings) {
+				this.galleryObjectId = galleryObjectId;
+				this.galleryObjectName = galleryObjectName;
+				this.containerId = settings.containerId;
+				this.userName = settings.userName;
+				this.albumName = settings.albumName;
+				this.imageSize = settings.imageSize;
+				this.itemsArray = [];
+
+				this.setup = function (data) {
+					this.itemsArray = data.feed.entry;
+					this.totalItems = this.itemsArray.length;
+
+		 			for (var x = 0; x < this.totalItems; x++) {
+						jQuery('#' + this.containerId).append('<div onClick="document.location.href=\''+this.itemsArray[x].media$group.media$content[0].url+'\'" class="picasaGalleryItem" style="cursor: pointer; width: ' + this.imageSize + 'px; height: ' + this.imageSize + 'px; background: url(' + this.itemsArray[x].media$group.media$thumbnail[0].url + ') no-repeat center center; "></div>');
+					}
+				};
+
+			},
+
+			load: function (settings) {
+				var galleryObjectId = picasa.galleries++;
+				var galleryObjectName = 'picasa.gallery' + galleryObjectId;
+				var galleryObject = eval(galleryObjectName + ' = new picasa.gallery(galleryObjectId, galleryObjectName, settings)');
+
+				scriptLoader.load([
+					'http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js',
+					'http://picasaweb.google.com/data/feed/api/user/' + galleryObject.userName + '/album/' + galleryObject.albumName + '?alt=json-in-script&callback=' + galleryObjectName + '.setup&kind=photo&thumbsize=' + galleryObject.imageSize
+				]);
+			}
+
+		}
+		</script>
+
+ <h1>Editor's Choice Pictures</h1>
+<p>Pictures we thought were worthy enough to go on the website. For the rest of our photos, see <%= link_to "our Picasa albums", "https://picasaweb.google.com/113247014624505710959" %>.
+		<div id="picasaGallery"></div>
+		<script type="text/javascript">
+			picasa.load({
+				containerId: 'picasaGallery',
+				userName: '113247014624505710959',
+				albumName: 'Websiteworthy',
+				imageSize: 104
+			})
+		</script>
