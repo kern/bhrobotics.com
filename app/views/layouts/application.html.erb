@@ -13,7 +13,11 @@
   <body>
     <div id="top-background"></div>
     <div id="loader">Loading...</div>
+    <script type="text/javascript">
+      if(window.devicePixelRatio == 2)
+        $('header#header').replaceWith('header#header-retina');
 
+    </script>
     <header id="header">
       <%= link_to "Home", welcome_path, :id => "logo" %>
       <div id="social-media-links">
