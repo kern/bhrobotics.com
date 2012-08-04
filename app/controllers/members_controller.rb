@@ -71,8 +71,4 @@ class MembersController < ApplicationController
       render :sign_in
     end
   end
-
-  def last_name
-    if @member.graduation_year.to_i < Time.now.year
-      @member.name.split
 end
