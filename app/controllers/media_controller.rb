@@ -1,5 +1,6 @@
 class MediaController < ApplicationController
-  def photos
+ =begin 
+ def photos
     require 'net/http'
     require 'rexml/document'
     picasa_url = "http://picasaweb.google.com/data/feed/api/user/113247014624505710959"
@@ -22,4 +23,5 @@ class MediaController < ApplicationController
    # }
    # @albums = res.body
   end
+=end
 end
