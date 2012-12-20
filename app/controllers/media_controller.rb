@@ -1,5 +1,4 @@
 class MediaController < ApplicationController
- =begin 
  def photos
     require 'net/http'
     require 'rexml/document'
@@ -23,5 +22,4 @@ class MediaController < ApplicationController
    # }
    # @albums = res.body
   end
-=end
 end
