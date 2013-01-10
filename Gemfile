@@ -2,7 +2,7 @@ source "http://rubygems.org"
 
 gem "rails", "3.1.3"
 gem "jquery-rails"
-
+gem "nokogiri"
 group :development do
   gem "sqlite3"
 end
