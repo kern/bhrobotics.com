@@ -5,7 +5,7 @@ class MembersController < ApplicationController
     @students = Member.where(:category => "student").order("name ASC")
     @mentors = Member.where(:category => "mentor").order("name ASC")
    # @alumni = Member.where(:category => "alumni").order("name ASC")
-    @alumni = Member.where(:graduation_year.to_i < Time.now.year).order("name ASC")
+    @alumni = Member.where(:graduation_year.to_s.to_i < Time.now.year).order("name ASC")
   end
 
   def show
