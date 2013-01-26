@@ -2,7 +2,8 @@ class MembersController < ApplicationController
   before_filter :require_sign_in, :except => [:index, :show, :sign_in, :check_sign_in]
 
   def index
-    @students = Member.where(:category => "student" && :graduation_year.to_s.to_i >= Time.now.year).order("name ASC")
+    #:category => "student" && 
+    @students = Member.where(:graduation_year.to_s.to_i > Time.now.year).order("name ASC")
     @mentors = Member.where(:category => "mentor").order("name ASC")
    # @alumni = Member.where(:category => "alumni").order("name ASC")
     @alumni = Member.where(:graduation_year.to_s.to_i < Time.now.year).order("name ASC")
