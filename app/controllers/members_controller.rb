@@ -20,7 +20,7 @@ class MembersController < ApplicationController
   def edit
     @member = Member.find(params[:id])
   end
-
+ 
   def create
     @member = Member.new(params[:member])
 
