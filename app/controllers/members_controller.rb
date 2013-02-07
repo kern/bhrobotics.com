@@ -3,11 +3,11 @@ class MembersController < ApplicationController
 
   def index
     #:category => "student" && 
-    @students = Member.where(:graduation_year.to_s.to_i > Time.now.year).order("name ASC")
-    @mentors = Member.where(:category => "mentor").order("name ASC")
-   # @alumni = Member.where(:category => "alumni").order("name ASC")
-    @alumni = Member.where(:graduation_year.to_s.to_i < Time.now.year).order("name ASC")
-  end
+   # @member = Member.find#(params[:id]) <- no sense in this context
+     @students = Member.where(:graduation_year > Time.now.year).order("name ASC") 
+      @alumni = Member.where(:graduation_year < Time.now.year).order("name ASC")   
+  @mentors = Member.where(:category => "mentor").order("name ASC")    
+   end
 
   def show
     @member = Member.find(params[:id])
