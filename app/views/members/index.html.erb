@@ -13,6 +13,7 @@
       <% @students.each do |student| %>
         <li>
           <%= link_to student.name, member_path(student) %>
+          <%= student.graduation_year %>
         </li>
       <% end %>
     </ul>
@@ -33,6 +34,8 @@
       <% @alumni.each do |alumni| %>
         <li>
           <%= link_to alumni.name, member_path(alumni) %>
+          <%= alumni.graduation_year %>
+          
         </li>
       <% end %>
     </ul>
