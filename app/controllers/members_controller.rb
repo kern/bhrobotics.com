@@ -4,7 +4,7 @@ class MembersController < ApplicationController
   def index
     #:category => "student" && 
    # @member = Member.find#(params[:id]) <- no sense in this context
-    @students = Member.where("graduation_year > ?", Time.now.year).order("name ASC") 
+    @students = Member.where("graduation_year >= ?", Time.now.year).order("name ASC") 
     @alumni = Member.where("graduation_year < ?", Time.now.year).order("name ASC")   
     @mentors = Member.where(:category => "mentor").order("name ASC")    
   end
