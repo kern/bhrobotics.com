@@ -77,6 +77,7 @@ BHRobotics::Application.routes.draw do
     get "rack-n-roll" => "first#rack_n_roll", :as => :rack_n_roll
     get "aim-high" => "first#aim_high", :as => :aim_high
     get "triple-play" => "first#triple_play", :as => :triple_play
+    get "game" => "first#game", :as => :game
     get "heroes-of-first" => "first#heroes_of_first", :as => :heroes_of_first
     get "creating-a-first-website" => "first#creating_a_first_website", :as => :creating_a_first_website
     root :to => "first#what_is_first"
