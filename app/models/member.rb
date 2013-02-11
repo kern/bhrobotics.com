@@ -1,7 +1,9 @@
 class Member < ActiveRecord::Base
   #validates_presence_of 
-  attr_accessible :name
-  attr_accessible :graduation_year
+#  attr_accessible :name
+  attr_accessible :name, :biography, :college, :graduation_year, :position, :subteam, :company, :category, :picture
+  #attr_protected
+  #attr_accessible :graduation_year
   #validates_inclusion_of :category, :in => %w{student mentor alumni}
 end
 
