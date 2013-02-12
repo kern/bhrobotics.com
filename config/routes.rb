@@ -44,7 +44,7 @@ BHRobotics::Application.routes.draw do
     get "wdi" => "partners#wdi", :as => :wdi
     get "larop" => "partners#larop", :as => :larop
     get "raytheon" => "partners#raytheon", :as => :raytheon
-    get "redman" => "partners#redman", :as => :redman
+   # get "redman" => "partners#redman", :as => :redman
     get "asb" => "partners#asb", :as => :asb
     get "wire-edm" => "partners#wire_edm", :as => :wire_edm
     root :to => "partners#wdi"
