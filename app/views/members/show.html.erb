@@ -3,7 +3,7 @@
 
 <% if @member.picture.present? %>
   <section class="banner">
-    <%= image_tag @member.picture, :alt => @member.name %>
+    <%= image_tag @member.picture, :alt => @member.name, :size => '255x384' %>
   </section>
 <% end %>
 
