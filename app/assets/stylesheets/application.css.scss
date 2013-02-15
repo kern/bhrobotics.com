@@ -31,3 +31,12 @@
 @import "pages/creating_a_first_website";
 @import "pages/members";
 @import "pages/welcome";
+
+.banner-image img {
+  -webkit-transform: scale(0.75); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.75); /* FF3.5+ */
+      -ms-transform: scale(0.75); /* IE9 */
+       -o-transform: scale(0.75); /* Opera 10.5+ */ 
+          transform: scale(0.75);
+             /* IE6–IE9 */
+}
