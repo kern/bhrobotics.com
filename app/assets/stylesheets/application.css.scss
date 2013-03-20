@@ -33,10 +33,10 @@
 @import "pages/welcome";
 
 .banner-image img {
-  -webkit-transform: scale(0.9); /* Saf3.1+, Chrome */
-     -moz-transform: scale(0.9); /* FF3.5+ */
-      -ms-transform: scale(0.9); /* IE9 */
-       -o-transform: scale(0.9); /* Opera 10.5+ */ 
-          transform: scale(0.9);
-             /* IE6–IE9 */
+  -webkit-transform: scale(0.75); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.75); /* FF3.5+ */
+      -ms-transform: scale(0.75); /* IE75 */
+       -o-transform: scale(0.75); /* Opera 10.5+ */ 
+          transform: scale(0.75);
+             /* IE6–IE75 */
 }
