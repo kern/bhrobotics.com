@@ -86,5 +86,5 @@ BHRobotics::Application.routes.draw do
   scope "/welcome" do
     get "webcast" => "welcome#webcast", :as => :webcast
   end
-  root :to => "welcome#webcast"
+  root :to => "welcome#index"
 end
