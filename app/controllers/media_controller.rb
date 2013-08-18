@@ -53,3 +53,4 @@ class MediaController < ApplicationController
     @picasa_doc = doc
   end
 end
+
