@@ -3,39 +3,39 @@
 
 <% if @member.picture.present? %>
   <section class="banner banner-image">
-    <%= image_tag @member.picture, :alt => @member.name %>
+    <% image_tag @member.picture, :alt => @member.name %>
   </section>
 <% end %>
 
 <section class="information">
-  <h1><%= @member.name %></h1>
+  <h1><% @member.name %></h1>
   <ul>
     <% if @member.biography.present? %>
-      <li>Biography: <%= @member.biography %></li>
+      <li>Biography: <% @member.biography %></li>
     <% end %>
 
     <% if @member.college.present? %>
-      <li>College: <%= @member.college %></li>
+      <li>College: <% @member.college %></li>
     <% end %>
 
     <% if @member.graduation_year.present? %>
-      <li>Graduation year: <%= @member.graduation_year %></li>
+      <li>Graduation year: <% @member.graduation_year %></li>
     <% end %>
 
     <% if @member.position.present? %>
-      <li>Position: <%= @member.position %></li>
+      <li>Position: <% @member.position %></li>
     <% end %>
 
     <% if @member.subteam.present? %>
-      <li>Subteam: <%= @member.subteam %></li>
+      <li>Subteam: <% @member.subteam %></li>
     <% end %>
 
     <% if @member.company.present? %>
-      <li>Company: <%= @member.company %></li>
+      <li>Company: <% @member.company %></li>
     <% end %>
   </ul>
 </section>
 
 <% if signed_in? %>
-  <%= link_to "Edit", edit_member_path(@member) %>
+  <% link_to "Edit", edit_member_path(@member) %>
 <% end %>
