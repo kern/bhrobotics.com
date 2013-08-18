@@ -2,9 +2,8 @@
 <% page_class "members" %>
 
 <section class="banner">
-  <%= image_tag "resized-2013.jpg", :alt => "Team picture" %>
+  <% image_tag "resized-2013.jpg", :alt => "Team picture" %>
 </section>
-
 <section class="members-list">
   <div class="column-1">
     <h1>Members</h1>
@@ -12,7 +11,7 @@
     <ul>
       <% @students.each do |student| %>
         <li>
-          <%= link_to student.name, member_path(student) %>
+          <% link_to student.name, member_path(student) %>
         </li>
       <% end %>
     </ul>
@@ -23,7 +22,7 @@
     <ul>
       <% @mentors.each do |mentor| %>
         <li>
-          <%= link_to mentor.name, member_path(mentor) %>
+          <% link_to mentor.name, member_path(mentor) %>
         </li>
       <% end %>
     </ul>
@@ -32,7 +31,7 @@
     <ul>
       <% @alumni.each do |alumni| %>
         <li>
-          <%= link_to alumni.name, member_path(alumni) %>
+          <% link_to alumni.name, member_path(alumni) %>
           
         </li>
       <% end %>
