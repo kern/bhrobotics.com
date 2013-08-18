@@ -16,9 +16,9 @@
         <header id="header">
       <%= link_to "Home", welcome_path, :id => "logo" %>
       <div id="social-media-links">
-        <%= link_to "Facebook", "http://www.facebook.com/pages/BHHS-Robotics/170502726325973", :class => "facebook" %>
+        <% link_to "Facebook", "http://www.facebook.com/pages/BHHS-Robotics/170502726325973", :class => "facebook" %>
         &middot;
-        <%= link_to "Twitter", "http://twitter.com/bhrobotics1515", :class => "twitter" %>
+        <% link_to "Twitter", "http://twitter.com/bhrobotics1515", :class => "twitter" %>
         &middot;
         <%= link_to "Blog", "http://bhrobotics.tumblr.com" %>
         &middot;
@@ -37,7 +37,7 @@
             <%= link_to "About", mission_path %>
             <ol class="subsections">
               <li><%= link_to "Mission", mission_path %></li>
-              <li><%= link_to "Members", members_path %></li>
+              <li><% link_to "Members", members_path %></li>
               <li><%= link_to "Robots", robots_path %></li>
               <li><%= link_to "Awards", awards_path %></li>
               <li><%= link_to "About this Website", about_this_website_path %></li>
